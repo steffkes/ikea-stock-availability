@@ -1,0 +1,12 @@
+on:
+  schedule:
+  - cron: "0 */1 * * *"
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+    - name: shub
+      uses: wei/curl@v1.1.1
+      with:
+        args: '-u ${{ secrets.SHUB_API_KEY }}: https://app.scrapinghub.com/api/run.json -d project=485959 -d spider=stock-availability'
+
