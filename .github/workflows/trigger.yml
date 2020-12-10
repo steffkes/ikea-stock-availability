@@ -6,8 +6,11 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-    - name: shub
-      uses: wei/curl@v1.1.1
+    - uses: actions/checkout@v1
+    - name: build
+      uses: docker-compose -f docker-compose.yml build
+    - name: crawl
+      uses: docker-compose -f docker-compose.yml run --entrypoint=/bin/ash app -c "scrapy crawl stock-availability -o stock-availability.jsonlines 2> /dev/null; cat stock-availability.jsonlines" >> data/stock-availablity.jsonlines
+    - uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        args: -u '${{ secrets.SHUB_API_KEY }}:' https://app.scrapinghub.com/api/run.json -d project=485959 -d spider=stock-availability
-        
+        commit_message: update stock-availability
