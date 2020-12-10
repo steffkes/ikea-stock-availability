@@ -8,9 +8,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: build
-      uses: docker-compose -f docker-compose.yml build
+      run: docker-compose -f docker-compose.yml build
     - name: crawl
-      uses: docker-compose -f docker-compose.yml run --entrypoint=/bin/ash app -c "scrapy crawl stock-availability -o stock-availability.jsonlines 2> /dev/null; cat stock-availability.jsonlines" >> data/stock-availablity.jsonlines
+      run: docker-compose -f docker-compose.yml run --entrypoint=/bin/ash app -c "scrapy crawl stock-availability -o stock-availability.jsonlines 2> /dev/null; cat stock-availability.jsonlines" >> data/stock-availablity.jsonlines
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: update stock-availability
