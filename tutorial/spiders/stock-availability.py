@@ -21,7 +21,12 @@ class StockAvailabilitySpider(scrapy.Spider):
         'https://iows.ikea.com/retail/iows/de/de/stores/328/availability/ART/70337701',
         'https://iows.ikea.com/retail/iows/de/de/stores/328/availability/ART/00336267',
         'https://iows.ikea.com/retail/iows/de/de/stores/328/availability/ART/60226039',
-        'https://iows.ikea.com/retail/iows/de/de/stores/328/availability/ART/70235627'
+        'https://iows.ikea.com/retail/iows/de/de/stores/328/availability/ART/70235627',
+        'https://iows.ikea.com/retail/iows/de/de/stores/328/availability/ART/20438707',
+        'https://iows.ikea.com/retail/iows/de/de/stores/328/availability/ART/40277992',
+        'https://iows.ikea.com/retail/iows/de/de/stores/328/availability/ART/40204694',
+        'https://iows.ikea.com/retail/iows/de/de/stores/328/availability/ART/90204696',
+        'https://iows.ikea.com/retail/iows/de/de/stores/328/availability/ART/80409537'
     ]
 
     def parse(self, response):
