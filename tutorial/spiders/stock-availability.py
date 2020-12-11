@@ -18,10 +18,22 @@ class StockAvailabilitySpider(scrapy.Spider):
             "60468561",
             "30468478",
             "10401931",
-            "80214568",
-            "50214560",
-            "20214571",
-            "70214559",
+            "80214568",  # PAX Korpus Kleiderschrank 50x58x236 cm (weiß)
+            "90183991",  # ^ Eiche
+            "40395981",  # ^ Braun
+            "40121585",  # ^ Schwarz
+            "50214560",  # PAX Korpus Kleiderschrank 100x58x236 cm (Weiß)
+            "30183989",  # ^ Eiche
+            "90121583",  # ^ Schwarz
+            "80395979",  # ^ Braun
+            "20214571",  # PAX Korpus Kleiderschrank 75x58x236 cm (weiß)
+            "50183993",  # ^ Eiche
+            "20395982",  # ^ Braun
+            "70121584",  # ^ Schwarz
+            "70214559",  # PAX Korpus Kleiderschrank 50x58x201 cm (weiß)
+            "20201724",  # ^ Eiche
+            "60396003",  # ^ Braun
+            "50141390",  # ^ Schwarz
             "30277959",
             "60262659",
             "10395925",
@@ -35,8 +47,11 @@ class StockAvailabilitySpider(scrapy.Spider):
             "40204694",
             "90204696",
             "80409537",
-            "20214566",
-            "00214572",
+            "20214566",  # PAX Korpus Kleiderschrank 100x58x201 cm (weiß)
+            "40201723",  # ^ Eiche
+            "80396002",  # ^ Braun
+            "30141391",  # ^ Schwarz
+            "00214572",  # PAX Korpus Kleiderschrank 100x35x236 cm (weiß)
             "40214565",
             "70214564",
             "40070185",  # BEKVÄM Gewürzregal
