@@ -67,7 +67,6 @@ DOWNLOADER_MIDDLEWARES = {
     "scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware": None,
     "scrapy.downloadermiddlewares.redirect.RedirectMiddleware": None,
     "scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware": None,
-    "scrapy.downloadermiddlewares.stats.DownloaderStats": None
     #    'tutorial.middlewares.TutorialDownloaderMiddleware': 543,
 }
 
