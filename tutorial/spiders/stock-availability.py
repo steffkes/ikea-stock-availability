@@ -81,6 +81,26 @@ class StockAvailabilitySpider(scrapy.Spider):
             "00403582",  # ^ Braun
             "60403579",  # ^ Schwarz
             "70482514",  # ^ Grau
+            "30372188",  # KALLAX Regal 42x112 cm (weiß)
+            "00508471",  # ^ Eiche
+            "00392847",  # ^ Schwarz
+            "80275887",  # KALLAX Regal 77x147 cm (weiß)
+            "00324518",  # ^ Eiche
+            "40346924",  # ^ Grau
+            "10459903",  # ^ Grün
+            "20275885",  # ^ Schwarz
+            "10305741",  # ^ Weiß, hochglanz
+            "20275814",  # KALLAX Regal 77x77 cm (weiß)
+            "60324520",  # ^ Eiche
+            "60275812",  # ^ Schwarz
+            "50305739",  # ^ Weiß, hochglanz
+            "10409932",  # KALLAX Regal 112x147 cm (weiß)
+            "40409935",  # ^ Eiche
+            "20409936",  # ^ Schwarz
+            "30275861",  # KALLAX Regal 147x147 cm (weiß)
+            "10324513",  # ^ Eiche
+            "10275862",  # ^ Schwarz
+            "20305745",  # ^ Weiß, hochglanz
         ]
     ]
 
