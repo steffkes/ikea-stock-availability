@@ -6,7 +6,8 @@ import json
 class StockAvailabilitySpider(scrapy.Spider):
     name = "stock-availability"
     start_urls = [
-        f"https://iows.ikea.com/retail/iows/de/de/stores/328/availability/ART/{article_id}"
+        f"https://iows.ikea.com/retail/iows/de/de/stores/{station_id}/availability/ART/{article_id}"
+        for station_id in [328]
         for article_id in [
             "70277957",
             "60468561",
