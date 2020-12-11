@@ -39,6 +39,33 @@ class StockAvailabilitySpider(scrapy.Spider):
             "00214572",
             "40214565",
             "70214564",
+            "40070185",  # BEKVÄM Gewürzregal
+            "40279731",  # BOTKYRKA Wandregal 80x20 cm
+            "20337398",  # SINNLIG Duftkerze im Glas 7.5 cm
+            "90292103",  # MOSSLANDA Bilderleiste 115 cm
+            "30403571",  # MALM Kommode mit 4 Schubladen 80x100 cm (Weiß)
+            "70403574",  # ^ Eiche
+            "70403569",  # ^ Braun
+            "30403566",  # ^ Schwarz
+            "90482513",  # ^ Grau
+            "50424054",  # ^ Weiß, hochglanz
+            "20403562",  # MALM Kommode mit 3 Schubladen 80x78 cm (Weiß)
+            "80403564",  # ^ Eiche
+            "80403559",  # ^ Braun
+            "20403557",  # ^ Schwarz
+            "10482512",  # ^ Grau
+            "40450270",  # ^ Rot
+            "70424053",  # ^ Weiß, hochglanz
+            "60403602",  # MALM Kommode mit 6 Schubladen 80x123 cm
+            "90403605",  # ^ Eiche
+            "40403599",  # ^ Braun
+            "70403606",  # ^ Schwarz
+            "40482515",  # ^ Grau
+            "60403584",  # MALM Kommode mit 6 Schubladen 160x78 cm
+            "90403587",  # ^ Eiche
+            "00403582",  # ^ Braun
+            "60403579",  # ^ Schwarz
+            "70482514",  # ^ Grau
         ]
     ]
 
