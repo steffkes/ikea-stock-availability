@@ -1,5 +1,7 @@
 version: "3.8"
 services:
 
-  app:
-    build: .
+  crawler:
+    build:
+      context: .
+      dockerfile: Dockerfile.crawler
