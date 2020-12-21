@@ -1,0 +1,14 @@
+on:
+ workflow_dispatch:
+ schedule:
+  - cron: "0 1 * * *"
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: compress
+      run: find data -mtime +1 -type f | xargs gzip --verbose
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: compress raw files
