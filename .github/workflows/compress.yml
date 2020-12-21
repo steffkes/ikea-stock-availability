@@ -8,4 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: compress
-      run: date --help
+      run: gzip --verbose data/$(date --date="yesterday" -u +"%Y-%m-%d")
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: compress raw files
