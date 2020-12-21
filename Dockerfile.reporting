@@ -1,0 +1,23 @@
+FROM python:3.7.9-buster AS builder
+
+WORKDIR /app
+
+COPY requirements-reporting.txt reporting-setup.py ./
+
+RUN pip install -r requirements-reporting.txt
+
+RUN mkdir /data
+COPY data/* /data/
+RUN cat /data/* > /data/combined.jsonl && python reporting-setup.py
+
+FROM python:3.7.9-buster
+
+WORKDIR /app
+RUN mkdir /data
+
+COPY --from=builder /data/stock.jsonl.gz /data
+COPY requirements-reporting.txt reporting.py ./
+
+RUN pip install -r requirements-reporting.txt
+
+CMD ["sh", "-c", "streamlit run --server.port $PORT reporting.py"]

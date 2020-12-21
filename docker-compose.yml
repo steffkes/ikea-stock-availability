@@ -5,3 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.crawler
+
+  reporting:
+    image: registry.heroku.com/wo-ist-billy/web
+    build:
+      context: .
+      dockerfile: Dockerfile.reporting

@@ -5,3 +5,12 @@ services:
     working_dir: /app
     volumes: 
       - ./:/app
+
+  reporting:
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      PORT: 8501
+    ports:
+      - 127.0.0.1:8501:8501
