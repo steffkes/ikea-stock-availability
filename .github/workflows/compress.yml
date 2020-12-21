@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: compress
-      run: find data -mtime +1 -type f | xargs gzip --verbose
+      run: gzip --verbose data/$(date -v -1d -u +"%Y-%m-%d").*
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: compress raw files
