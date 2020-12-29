@@ -27,13 +27,9 @@ jobs:
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
-      -
-        name: deploy
-        uses: wei/curl@v1
-        with:
-          args: >
-            -H "Content-Type: application/json"
-            -H "Accept: application/vnd.heroku+json; version=3.docker-releases"
-            -H "Authorization: Bearer ${{ secrets.HEROKU_PWD }}"
-            --netrc -X PATCH https://api.heroku.com/apps/wo-ist-billy/formation
-            -d '{"updates": [{"type": "web", "docker_image": "${{ steps.docker_build.outputs.digest }}"}]}'
+      - name: Release
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_PWD }}
+        run: |
+          heroku container:login
+          heroku container:release -a wo-ist-billy web
