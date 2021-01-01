@@ -1,11 +1,13 @@
 import pandas as pd
 
+
 def flatten(stock):
-   data = {}
-   data["store_id"] = stock["ClassUnitKey"]["ClassUnitCode"]["$"]
-   data["article_id"] = stock["ItemKey"]["ItemNo"]["$"]
-   data["stock"] = stock["RetailItemAvailability"]["AvailableStock"]["$"]
-   return pd.Series(data)
+    data = {}
+    data["store_id"] = stock["ClassUnitKey"]["ClassUnitCode"]["$"]
+    data["article_id"] = stock["ItemKey"]["ItemNo"]["$"]
+    data["stock"] = stock["RetailItemAvailability"]["AvailableStock"]["$"]
+    return pd.Series(data)
+
 
 data = pd.read_json("/tmp/combined.jsonl.gz", lines=True, compression="gzip")
 data = data.join(data["StockAvailability"].apply(flatten))
