@@ -14,3 +14,12 @@ services:
       PORT: 8501
     ports:
       - 127.0.0.1:8501:8501
+
+  tmp:
+    image: samdobson/streamlit:0.72.0
+    working_dir: /app
+    command: ["tmp-01.py"]
+    volumes:
+      - ./:/app
+    ports:
+      - 127.0.0.1:8502:8501
