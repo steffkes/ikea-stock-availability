@@ -1,16 +1,19 @@
-FROM python:3.7.9-buster AS builder
+FROM alpine:3.12.3 AS builder
 
-WORKDIR /app
+RUN apk add --no-cache jq
 
-COPY requirements-reporting.txt reporting-setup.py ./
+WORKDIR /data
 
-RUN pip install -r requirements-reporting.txt
+COPY data/* ./
 
-RUN mkdir /data
-COPY data/* /data/
-
-RUN cat /data/*.gz > /tmp/combined.jsonl.gz && \
-    python reporting-setup.py
+RUN gunzip -c *.gz | \
+    jq -c '{ \
+      _fetched_at, \
+      store_id: .StockAvailability.ClassUnitKey.ClassUnitCode["$"] | tostring, \
+      article_id: .StockAvailability.ItemKey.ItemNo["$"] | tostring, \
+      stock: .StockAvailability.RetailItemAvailability.AvailableStock["$"] | tonumber \
+    }' | \
+    gzip -c > /tmp/stock.jsonl.gz
 
 FROM python:3.7.9-buster
 
