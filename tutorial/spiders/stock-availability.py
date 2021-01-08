@@ -169,7 +169,7 @@ class StockAvailabilitySpider(scrapy.Spider):
             "90124534",  # SKORVA Mittelbalken, verzinkt
             "40429410",  # SAGSTUA Bettseiten, schwarz, 200 cm
             "90272384",  # MATRAND Memoryschaummatratze, 140x200 cm
-            "89268892",  # SAGSTUA Bettgestell, 140x200 cm
+            # "89268892",  # (S) SAGSTUA Bettgestell, 140x200 cm
             "40349531",  # FEJKA Topfpflanze, künstlich, 9 cm
             "90292103",  # MOSSLANDA Bilderleiste, 115 cm
             # "50423257", # BERGPALM Bettwäscheset, 2-teilig, 140x200/80x80 cm
