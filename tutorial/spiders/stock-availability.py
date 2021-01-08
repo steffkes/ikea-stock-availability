@@ -151,6 +151,40 @@ class StockAvailabilitySpider(scrapy.Spider):
             "10324513",  # ^ Eiche
             "10275862",  # ^ Schwarz
             "20305745",  # ^ Weiß, hochglanz
+            "50468514",  # SMYCKA Kunstblumenstrauß
+            "00473909",  # VINTER 2020 Geschenkpapierrolle 3x0.7 m
+            "00474414",  # VINTER 2020 Kleberolle, 5 m
+            "10475074",  # VINTER 2020 Dekoration, 35 cm
+            "30474276",  # VINTER 2020 Geschenktüte für Flasche, 13x41 cm
+            "20475993",  # VINTER 2020, Potpourri
+            "40474214",  # VINTER 2020, Geschenkband 40m
+            "90436314",  # FLOALT LED-Lichtpaneel, 30x30cm
+            "90444366",  # ROSENSKÄRM Kissen erg./Seiten-/Rückenschläfer, 33x50 cm
+            "30337393",  # SINNLIG Duftkerze im Glas, 7.5 cm
+            "20236262",  # FANTASTISK Papierserviette, 40x40 cm
+            "70342199",  # FJÄLLBO Regal, 51x136 cm
+            "10447528",  # VÅRVIAL Spannbettlaken für Tagesbett, 80x200 cm
+            # "80391882", # (S) SAXBORGA Kasten mit Spiegeldeckel, 24x17 cm
+            "60420932",  # SAGSTUA Kopf- und Fußteil, schwarz, 140 cm
+            "90124534",  # SKORVA Mittelbalken, verzinkt
+            "40429410",  # SAGSTUA Bettseiten, schwarz, 200 cm
+            "90272384",  # MATRAND Memoryschaummatratze, 140x200 cm
+            "89268892",  # SAGSTUA Bettgestell, 140x200 cm
+            "40349531",  # FEJKA Topfpflanze, künstlich, 9 cm
+            "90292103",  # MOSSLANDA Bilderleiste, 115 cm
+            # "50423257", # BERGPALM Bettwäscheset, 2-teilig, 140x200/80x80 cm
+            "70340807",  # EKEDALEN Ausziehtisch, weiß, 120/180x80 cm
+            "60341015",  # EKEDALEN Stuhl, weiß/Orrsta hellgrau
+            # "19277036", # (S) MÖCKELBY / FANBYN Tisch und 6 Stühle, 235x100 cm
+            "00293772",  # MÖCKELBY Tisch
+            "00385069",  # FANBYN Gestell Stuhl
+            "80389148",  # FANBYN Sitzschale
+            # "39306288", # (S) LERHAMN Tisch und 2 Stühle, 74x74 cm
+            "20259423",  # LERHAMN Stuhl
+            "60444259",  # LERHAMN Tisch
+            # "79296857", # (S) EKEDALEN Tisch und 4 Stühle, weiß/Orrsta hellgrau, 120/180 cm
+            "70340807",  # EKEDALEN Ausziehtisch
+            "60341015",  # EKEDALEN Stuhl
         ]
     ]
 
