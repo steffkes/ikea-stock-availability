@@ -90,13 +90,14 @@ class StockAvailabilitySpider(scrapy.Spider):
             "50297485",
             "70337701",
             "00336267",
-            "60226039",
-            "70235627",
-            "20438707",
-            "40277992",
-            "40204694",
-            "90204696",
-            "80409537",
+            "60226039",  # VARIERA Kasten für Küchenutensilien, Bambus, 20x50 cm
+            "30242743",  # VARIERA Kasten für Küchenutensilien, Bambus, 32x50 cm
+            "70235627",  # DRAGON Tortenheber, Edelstahl, 25 cm
+            "20438707",  # RYET LED-Leuchtmittel E27 470 lm, rund opalweiß
+            "40277992",  # KOMPLEMENT Boden, weiß, 50x35 cm
+            "40204694",  # VARIERA Besteckkasten, Bambus, 52x50 cm
+            "90204696",  # VARIERA Besteckkasten, Bambus, 32x50 cm
+            "80409537",  # BEHÖVA Messbecher, transparent/grau, 1 l
             "20214566",  # PAX Korpus Kleiderschrank 100x58x201 cm (weiß)
             "40201723",  # ^ Eiche
             "80396002",  # ^ Braun
