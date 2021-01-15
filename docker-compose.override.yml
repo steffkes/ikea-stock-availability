@@ -18,7 +18,7 @@ services:
   tmp:
     image: samdobson/streamlit:0.72.0
     working_dir: /app
-    command: ["tmp-01.py"]
+    command: ["tmp-02.py"]
     volumes:
       - ./:/app
     ports:

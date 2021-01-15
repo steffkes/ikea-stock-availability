@@ -19,3 +19,21 @@ filter:
       restock_date: .StockAvailability.RetailItemAvailability.RestockDateTime["$"] \
     }' | \
     gzip --stdout > tmp/70277957-328-restock.jsonl.gz
+
+tmp-02:
+    gunzip data/*.gz --stdout | \
+    jq -c ' \
+    select( \
+      (.StockAvailability.ItemKey.ItemNo["$"] | tostring == "70277957") \
+    ) | { \
+      _fetched_at, \
+      store_id: .StockAvailability.ClassUnitKey.ClassUnitCode["$"] | tostring, \
+      article_id: .StockAvailability.ItemKey.ItemNo["$"] | tostring, \
+      available_stock: .StockAvailability.RetailItemAvailability.AvailableStock["$"] | tonumber, \
+    }' | \
+    tail -n 54 | \
+    gzip --stdout > tmp/70277957-latest.jsonl.gz
+
+stores:
+     cat stores.json | \
+     jq 'reduce .[] as $line ( {}; . + {($line.value): {name: $line.name, location: $line.storeLocation}} )'
