@@ -287,3 +287,16 @@ st.write(
         ],
     )
 )
+st.altair_chart(
+    alt.Chart(df)
+    .mark_bar()
+    .encode(
+        x="store_name",
+        y="available_stock",
+        tooltip=[
+            "store_name",
+            "available_stock",
+        ],
+    ),
+    use_container_width=True,
+)
