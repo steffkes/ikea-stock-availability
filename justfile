@@ -18,10 +18,10 @@ build:
 
 filter:
     gunzip data/*.gz --stdout | \
-    jq -c ' \
+    jq -c --arg article_id {{ article_id }} --arg store_id {{ store_id }} ' \
     select( \
-      (.StockAvailability.ClassUnitKey.ClassUnitCode["$"] | tostring == "328") and \
-      (.StockAvailability.ItemKey.ItemNo["$"] | tostring == "70277957") \
+      (.StockAvailability.ClassUnitKey.ClassUnitCode["$"] | tostring == $store_id) and \
+      (.StockAvailability.ItemKey.ItemNo["$"] | tostring == $article_id) \
     ) | { \
       _fetched_at, \
       store_id: .StockAvailability.ClassUnitKey.ClassUnitCode["$"] | tostring, \
@@ -29,7 +29,7 @@ filter:
       available_stock: .StockAvailability.RetailItemAvailability.AvailableStock["$"] | tonumber, \
       restock_date: .StockAvailability.RetailItemAvailability.RestockDateTime["$"] \
     }' | \
-    gzip --stdout > tmp/70277957-328-restock.jsonl.gz
+    gzip --stdout > tmp/{{ article_id }}-{{ store_id }}-restock.jsonl.gz
 
 tmp-02:
     gunzip data/$(ls data | tail -n1) --stdout | \
