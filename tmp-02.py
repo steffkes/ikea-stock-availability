@@ -89,7 +89,7 @@ st.altair_chart(
     .mark_bar()
     .encode(
         x="store_name",
-        y=alt.Y("available_stock", scale=alt.Scale(type="sqrt")),
+        y=alt.Y("available_stock", scale=alt.Scale(type="linear")),
         tooltip=[
             "store_name",
             "available_stock",
