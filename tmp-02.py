@@ -226,6 +226,16 @@ locations = {
 }
 
 
+def computed_stats(row):
+    record = {"map_fill_color": [0, 192, 0, 50], "map_line_color": [0, 192, 0, 255]}
+
+    if row["available_stock"] == 0:
+        record["map_fill_color"] = [255, 0, 0, 255]
+        record["map_line_color"] = [255, 0, 0, 255]
+
+    return pd.Series(record)
+
+
 @st.cache
 def load_data():
     data = pd.read_json(
@@ -245,6 +255,10 @@ def load_data():
         )
     )
     data[location.columns] = location
+
+    stats = data.apply(computed_stats, axis=1)
+    data[stats.columns] = stats
+
     return data
 
 
@@ -253,7 +267,7 @@ df = load_data()
 if st.checkbox("Show raw data"):
     df
 
-st.write(
+st.pydeck_chart(
     pdk.Deck(
         map_style="mapbox://styles/mapbox/light-v9",
         initial_view_state={
@@ -265,24 +279,19 @@ st.write(
         tooltip=True,
         layers=[
             pdk.Layer(
-                "HeatmapLayer",
+                "ScatterplotLayer",
                 data=df,
-                opacity=1.0,
-                get_position=["lon", "lat"],
-                get_weight="available_stock",
                 pickable=True,
-                #color_range=[[230, 158, 10], [10, 230, 120]],
-                #aggregation=pdk.types.String("MEAN"),
-                # color_range=[
-                # [240, 249, 232],
-                # [204, 235, 197],
-                # [168, 221, 181],
-                # [123, 204, 196],
-                # [67, 162, 202],
-                # [8, 104, 172],
-                # ],
-                # threshold=0,
-                # auto_highlight=True,
+                stroked=True,
+                filled=True,
+                radius_scale=50,
+                radius_min_pixels=1,
+                radius_max_pixels=100,
+                line_width_min_pixels=1,
+                get_position=["lon", "lat"],
+                get_radius="100",
+                get_fill_color="map_fill_color",
+                get_line_color="map_line_color",
             ),
         ],
     )
