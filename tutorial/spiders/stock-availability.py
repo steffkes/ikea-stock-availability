@@ -186,6 +186,8 @@ class StockAvailabilitySpider(scrapy.Spider):
             # "79296857", # (S) EKEDALEN Tisch und 4 Stühle, weiß/Orrsta hellgrau, 120/180 cm
             "70340807",  # EKEDALEN Ausziehtisch
             "60341015",  # EKEDALEN Stuhl
+            "10329308",  # YUCCA ELEPHANTIPES Pflanze, Palmlilie/2 Stämme, 24 cm
+            "80245051",  # STOCKHOLM 3er-Sofa, Seglora naturfarben
         ]
     ]
 
