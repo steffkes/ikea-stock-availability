@@ -8,5 +8,5 @@ COPY tmp/products.jsonl /data/tmp/
 COPY stores.json /data/
 COPY reporting.py ./
 
-ENTRYPOINT ["/bin/sh"]
+ENTRYPOINT ["/bin/bash"]
 CMD ["-c", "streamlit run --server.port $PORT reporting.py"]
