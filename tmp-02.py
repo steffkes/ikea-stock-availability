@@ -12,11 +12,9 @@ stores = dict(
         (
             store["value"],
             {
-                "name": store["name"],
-                "location": {
-                    "lon": float(store["storeLocation"]["longitude"]),
-                    "lat": float(store["storeLocation"]["latitude"]),
-                },
+                "store_name": store["name"],
+                "lon": float(store["storeLocation"]["longitude"]),
+                "lat": float(store["storeLocation"]["latitude"]),
             },
         )
         for store in json.load(open("./stores.json"))
@@ -46,9 +44,9 @@ def load_data():
     location = data["store_id"].apply(
         lambda store_id: pd.Series(
             {
-                "store_name": stores[store_id]["name"],
-                "lat": stores[store_id]["location"]["lat"],
-                "lon": stores[store_id]["location"]["lon"],
+                "store_name": stores[store_id]["store_name"],
+                "lat": stores[store_id]["lat"],
+                "lon": stores[store_id]["lon"],
             }
         )
     )
