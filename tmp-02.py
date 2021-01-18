@@ -234,11 +234,14 @@ def load_data():
         compression="gzip",
         dtype={"store_id": object, "article_id": object},
     )
+
     location = data["store_id"].apply(
         lambda store_id: pd.Series(
-            [locations[store_id]["name"]]
-            + [float(i) for i in list(locations[store_id]["location"].values())],
-            index=["store_name", "lon", "lat"],
+            {
+                "store_name": locations[store_id]["name"],
+                "lat": float(locations[store_id]["location"]["latitude"]),
+                "lon": float(locations[store_id]["location"]["longitude"]),
+            }
         )
     )
     data[location.columns] = location
