@@ -12,7 +12,7 @@ stores = dict(
         (
             store["value"],
             {
-                "store_name": store["name"],
+                "store_name": store["name"][5:],
                 "lon": float(store["storeLocation"]["longitude"]),
                 "lat": float(store["storeLocation"]["latitude"]),
             },
