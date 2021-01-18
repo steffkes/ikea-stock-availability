@@ -41,15 +41,7 @@ def load_data():
         dtype={"store_id": object, "article_id": object},
     )
 
-    location = data["store_id"].apply(
-        lambda store_id: pd.Series(
-            {
-                "store_name": stores[store_id]["store_name"],
-                "lat": stores[store_id]["lat"],
-                "lon": stores[store_id]["lon"],
-            }
-        )
-    )
+    location = data["store_id"].apply(lambda store_id: pd.Series(stores[store_id]))
     data[location.columns] = location
 
     stats = data.apply(computed_stats, axis=1)
