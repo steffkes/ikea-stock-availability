@@ -35,7 +35,7 @@ def computed_stats(row):
 @st.cache
 def load_data():
     data = pd.read_json(
-        "tmp/20438707-latest.jsonl.gz",
+        "tmp/60226039-latest.jsonl.gz",
         lines=True,
         compression="gzip",
         dtype={"store_id": object, "article_id": object},
