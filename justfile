@@ -34,6 +34,10 @@ tmp-02:
     tail -n 54 | \
     gzip --stdout > tmp/{{ article_id }}-latest.jsonl.gz
 
+product:
+    curl -s 'https://sik.search.blue.cdtapps.com/de/de/search-box?q={{ article_id }}' | \
+    jq -c '.searchBox.universal[0].product' >> tmp/products.jsonl
+
 stores:
      cat stores.json | \
      jq 'reduce .[] as $line ( {}; . + {($line.value): {name: $line.name, location: $line.storeLocation}} )'

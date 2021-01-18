@@ -33,9 +33,20 @@ def computed_stats(row):
 
 
 @st.cache
+def load_products():
+    data = pd.read_json(
+        "tmp/products.jsonl",
+        lines=True,
+        dtype={"id": object},
+    )
+
+    return data
+
+
+@st.cache(allow_output_mutation=True)
 def load_data():
     data = pd.read_json(
-        "tmp/90272384-latest.jsonl.gz",
+        "tmp/latest.jsonl.gz",
         lines=True,
         compression="gzip",
         dtype={"store_id": object, "article_id": object},
@@ -51,9 +62,23 @@ def load_data():
 
 
 df = load_data()
+products = load_products()
 
-if st.checkbox("Show raw data"):
-    df
+selected_article_id = st.sidebar.selectbox(
+    "Article to visualize", products["id"].unique()
+)
+
+data = df[df["article_id"] == selected_article_id]
+
+product = products[products["id"] == selected_article_id].iloc[0]
+
+st.sidebar.title(
+    "%s %s (%s)"
+    % (product["name"], product["typeName"], product["itemMeasureReferenceText"])
+)
+st.sidebar.write(product["pipUrl"])
+st.sidebar.image(product["mainImageUrl"], width=100)
+
 
 st.pydeck_chart(
     pdk.Deck(
@@ -68,7 +93,7 @@ st.pydeck_chart(
         layers=[
             pdk.Layer(
                 "ScatterplotLayer",
-                data=df,
+                data=data,
                 pickable=True,
                 stroked=True,
                 filled=True,
@@ -85,7 +110,7 @@ st.pydeck_chart(
     )
 )
 st.altair_chart(
-    alt.Chart(df)
+    alt.Chart(data)
     .mark_bar()
     .encode(
         x="store_name",
@@ -97,3 +122,6 @@ st.altair_chart(
     ),
     use_container_width=True,
 )
+
+if st.checkbox("Show raw data"):
+    data
