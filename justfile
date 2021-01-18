@@ -22,9 +22,9 @@ filter:
 
 tmp-02:
     gunzip data/*.gz --stdout | \
-    jq -c ' \
+    jq -c --arg article_id {{ article_id }} ' \
     select( \
-      (.StockAvailability.ItemKey.ItemNo["$"] | tostring == "70277957") \
+      (.StockAvailability.ItemKey.ItemNo["$"] | tostring == $article_id) \
     ) | { \
       _fetched_at, \
       store_id: .StockAvailability.ClassUnitKey.ClassUnitCode["$"] | tostring, \
@@ -32,7 +32,7 @@ tmp-02:
       available_stock: .StockAvailability.RetailItemAvailability.AvailableStock["$"] | tonumber, \
     }' | \
     tail -n 54 | \
-    gzip --stdout > tmp/70277957-latest.jsonl.gz
+    gzip --stdout > tmp/{{ article_id }}-latest.jsonl.gz
 
 stores:
      cat stores.json | \
