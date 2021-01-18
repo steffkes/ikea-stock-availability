@@ -1,28 +1,12 @@
-FROM alpine:3.12.3 AS builder
-
-RUN apk add --no-cache jq
-
-WORKDIR /data
-
-COPY data/* ./
-
-RUN gunzip -c *.gz | \
-    jq -c '{ \
-      _fetched_at, \
-      store_id: .StockAvailability.ClassUnitKey.ClassUnitCode["$"] | tostring, \
-      article_id: .StockAvailability.ItemKey.ItemNo["$"] | tostring, \
-      stock: .StockAvailability.RetailItemAvailability.AvailableStock["$"] | tonumber \
-    }' | \
-    gzip -c > /tmp/stock.jsonl.gz
-
-FROM python:3.7.9-buster
+FROM samdobson/streamlit:0.72.0
 
 WORKDIR /app
-RUN mkdir /data
+RUN mkdir -p /data/tmp
 
-COPY --from=builder /tmp/stock.jsonl.gz /data
-COPY requirements-reporting.txt reporting.py ./
+COPY tmp/latest.jsonl.gz /data/tmp/
+COPY tmp/products.jsonl /data/tmp/
+COPY stores.json /data/
+COPY reporting.py ./
 
-RUN pip install -r requirements-reporting.txt
-
-CMD ["sh", "-c", "streamlit run --server.port $PORT reporting.py"]
+ENTRYPOINT ["/bin/sh"]
+CMD ["-c", "streamlit run --server.port $PORT reporting.py"]

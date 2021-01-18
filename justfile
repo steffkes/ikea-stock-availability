@@ -41,3 +41,13 @@ product:
 stores:
      cat stores.json | \
      jq 'reduce .[] as $line ( {}; . + {($line.value): {name: $line.name, location: $line.storeLocation}} )'
+
+stock:
+    gunzip -c data/*.gz | \
+    jq -c '{ \
+      _fetched_at, \
+      store_id: .StockAvailability.ClassUnitKey.ClassUnitCode["$"] | tostring, \
+      article_id: .StockAvailability.ItemKey.ItemNo["$"] | tostring, \
+      stock: .StockAvailability.RetailItemAvailability.AvailableStock["$"] | tonumber \
+    }' | \
+    gzip -c > tmp/stock.jsonl.gz

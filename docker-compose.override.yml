@@ -15,6 +15,15 @@ services:
     ports:
       - 127.0.0.1:8501:8501
 
+  debug:
+    image: samdobson/streamlit:0.72.0
+    working_dir: /app
+    command: ["debug.py"]
+    volumes:
+      - ./:/app
+    ports:
+      - 127.0.0.1:8502:8500
+
   tmp:
     image: samdobson/streamlit:0.72.0
     working_dir: /app
