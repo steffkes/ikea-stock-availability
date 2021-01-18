@@ -7,15 +7,15 @@ import json
 
 st.set_page_config(layout="wide")
 
-locations = dict(
+stores = dict(
     [
         (
             store["value"],
             {
                 "name": store["name"],
                 "location": {
-                    "longitude": store["storeLocation"]["longitude"],
-                    "latitude": store["storeLocation"]["latitude"],
+                    "lon": float(store["storeLocation"]["longitude"]),
+                    "lat": float(store["storeLocation"]["latitude"]),
                 },
             },
         )
@@ -46,9 +46,9 @@ def load_data():
     location = data["store_id"].apply(
         lambda store_id: pd.Series(
             {
-                "store_name": locations[store_id]["name"],
-                "lat": float(locations[store_id]["location"]["latitude"]),
-                "lon": float(locations[store_id]["location"]["longitude"]),
+                "store_name": stores[store_id]["name"],
+                "lat": stores[store_id]["location"]["lat"],
+                "lon": stores[store_id]["location"]["lon"],
             }
         )
     )
