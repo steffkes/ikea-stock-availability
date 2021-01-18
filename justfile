@@ -21,7 +21,7 @@ filter:
     gzip --stdout > tmp/70277957-328-restock.jsonl.gz
 
 tmp-02:
-    gunzip data/*.gz --stdout | \
+    gunzip data/$(ls data | tail -n1) --stdout | \
     jq -c --arg article_id {{ article_id }} ' \
     select( \
       (.StockAvailability.ItemKey.ItemNo["$"] | tostring == $article_id) \
