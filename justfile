@@ -44,6 +44,7 @@ tmp-02:
     }' | \
     tail -n 54 | \
     gzip --stdout > tmp/{{ article_id }}-latest.jsonl.gz
+    # 54 ^= number of stores we're currently crawling
 
 product:
     curl -s 'https://sik.search.blue.cdtapps.com/de/de/search-box?q={{ article_id }}' | \
