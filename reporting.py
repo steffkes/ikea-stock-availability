@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import altair as alt
 import pydeck as pdk
+from datetime import datetime
 import json
 
 st.set_page_config(layout="wide")
@@ -51,6 +52,9 @@ def load_data():
         compression="gzip",
         dtype={"store_id": object, "article_id": object},
     )
+    data["date"] = data["fetched_at"].map(
+        lambda fetched_at: fetched_at.strftime("%Y-%m-%d")
+    )
 
     location = data["store_id"].apply(lambda store_id: pd.Series(stores[store_id]))
     data[location.columns] = location
@@ -68,8 +72,6 @@ selected_article_id = st.sidebar.selectbox(
     "Article to visualize", products["id"].unique()
 )
 
-data = df[df["article_id"] == selected_article_id]
-
 product = products[products["id"] == selected_article_id].iloc[0]
 
 st.sidebar.title(
@@ -79,6 +81,18 @@ st.sidebar.title(
 st.sidebar.write(product["pipUrl"])
 st.sidebar.image(product["mainImageUrl"], width=100)
 
+selected_date = st.slider(
+    label="",
+    min_value=datetime(2021, 1, 11),
+    value=datetime(2021, 1, 19),
+    max_value=datetime(2021, 1, 19),
+    format="YYYY-MM-DD",
+)
+
+data = df[
+    (df["article_id"] == selected_article_id)
+    & (df["date"] == selected_date.strftime("%Y-%m-%d"))
+]
 
 st.pydeck_chart(
     pdk.Deck(

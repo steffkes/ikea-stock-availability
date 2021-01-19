@@ -5,7 +5,7 @@ RUN pip install streamlit
 WORKDIR /app
 RUN mkdir -p /data/tmp
 
-COPY tmp/latest.jsonl.gz /data/tmp/
+COPY tmp/latest*.gz /data/tmp/
 COPY tmp/products.jsonl /data/tmp/
 COPY stores.json /data/
 COPY reporting.py ./
