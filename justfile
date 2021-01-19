@@ -1,5 +1,6 @@
 article_id := "30277959"
 store_id := "328"
+date := "2021-01-01"
 
 build:
     gunzip data/*.gz --stdout | \
@@ -63,3 +64,19 @@ stock:
       stock: .StockAvailability.RetailItemAvailability.AvailableStock["$"] | tonumber \
     }' | \
     gzip -c > tmp/stock.jsonl.gz
+
+stats:
+    gzip -dc data/{{ date }}.jsonlines.gz | \
+    jq -c ' \
+    { \
+      identifier: ((._fetched_at[0:10]) + "|" + (.StockAvailability.ClassUnitKey.ClassUnitCode["$"] | tostring) + "|" + (.StockAvailability.ItemKey.ItemNo["$"] | tostring)), \
+      fetched_at: ._fetched_at, \
+      store_id: .StockAvailability.ClassUnitKey.ClassUnitCode["$"] | tostring, \
+      article_id: .StockAvailability.ItemKey.ItemNo["$"] | tostring, \
+      available_stock: .StockAvailability.RetailItemAvailability.AvailableStock["$"] | tonumber \
+    }' | \
+    jq -cs 'group_by(.identifier) | map(.[-1])[]' | \
+    gzip -c > tmp/latest-{{ date }}.jsonl.gz
+
+stats-summary:
+    cat tmp/latest-*.gz > tmp/latest.jsonl.gz
