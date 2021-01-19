@@ -81,9 +81,9 @@ st.sidebar.title(
 st.sidebar.write(product["pipUrl"])
 st.sidebar.image(product["mainImageUrl"], width=100)
 
-selected_date = st.slider(
+selected_date = st.sidebar.slider(
     label="",
-    min_value=datetime(2021, 1, 11),
+    min_value=datetime(2021, 1, 15),
     value=datetime(2021, 1, 19),
     max_value=datetime(2021, 1, 19),
     format="YYYY-MM-DD",
