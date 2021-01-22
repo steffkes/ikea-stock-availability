@@ -97,6 +97,10 @@ data = df[
     & (df["date"] == selected_date.strftime("%Y-%m-%d"))
 ]
 
+st.sidebar.write(
+    "Last updated: %s" % data["fetched_at"].max().strftime("%Y-%m-%d %H:%M:%S UTC")
+)
+
 st.pydeck_chart(
     pdk.Deck(
         map_style="mapbox://styles/mapbox/light-v9",
