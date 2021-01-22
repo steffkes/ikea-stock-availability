@@ -68,7 +68,9 @@ stock:
 stats:
     gzip -dc data/{{ date }}.jsonlines.gz | \
     jq -c ' \
-    { \
+    select( \
+      (.StockAvailability.ItemKey.ItemNo["$"] | tostring == ("20438707", "30277959", "40474214", "60226039", "70235627", "70277957", "70340807", "80409537", "90272384")) \
+    ) | { \
       identifier: ((._fetched_at[0:10]) + "|" + (.StockAvailability.ClassUnitKey.ClassUnitCode["$"] | tostring) + "|" + (.StockAvailability.ItemKey.ItemNo["$"] | tostring)), \
       fetched_at: ._fetched_at, \
       store_id: .StockAvailability.ClassUnitKey.ClassUnitCode["$"] | tostring, \
