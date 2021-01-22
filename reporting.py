@@ -92,10 +92,8 @@ selected_date = st.sidebar.slider(
     format="YYYY-MM-DD",
 )
 
-data = df[
-    (df["article_id"] == selected_article_id)
-    & (df["date"] == selected_date.strftime("%Y-%m-%d"))
-]
+article_data = df[(df["article_id"] == selected_article_id)]
+data = article_data[(df["date"] == selected_date.strftime("%Y-%m-%d"))]
 
 st.sidebar.write(
     "Last updated: %s" % data["fetched_at"].max().strftime("%Y-%m-%d %H:%M:%S UTC")
@@ -135,7 +133,12 @@ st.altair_chart(
     .mark_bar()
     .encode(
         x="store_name",
-        y=alt.Y("available_stock", scale=alt.Scale(type="linear")),
+        y=alt.Y(
+            "available_stock",
+            scale=alt.Scale(
+                domain=(0, article_data["available_stock"].max()), type="linear"
+            ),
+        ),
         tooltip=[
             "store_name",
             "available_stock",
