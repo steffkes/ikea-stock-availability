@@ -36,12 +36,15 @@ def computed_stats(row):
     return pd.Series(record)
 
 
-@st.cache
+@st.cache(allow_output_mutation=True)
 def load_products():
     data = pd.read_json(
         os.path.join(ROOT_PATH, "tmp/products.jsonl"),
         lines=True,
         dtype={"id": object},
+    )
+    data["label"] = data.apply(
+        lambda row: "%s %s (%s)" % (row["id"], row["name"], row["typeName"]), axis=1
     )
 
     return data
@@ -72,7 +75,9 @@ df = load_data()
 products = load_products()
 
 selected_article_id = st.sidebar.selectbox(
-    "Article to visualize", products["id"].unique()
+    "Article to visualize",
+    options=products["id"],
+    format_func=lambda id: products[products["id"] == id].iloc[0]["label"],
 )
 
 product = products[products["id"] == selected_article_id].iloc[0]
