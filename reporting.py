@@ -5,6 +5,9 @@ import altair as alt
 import pydeck as pdk
 from datetime import datetime
 import json
+import os
+
+ROOT_PATH = os.environ["ROOT"]
 
 st.set_page_config(layout="wide")
 
@@ -18,7 +21,7 @@ stores = dict(
                 "lat": float(store["storeLocation"]["latitude"]),
             },
         )
-        for store in json.load(open("/data/stores.json"))
+        for store in json.load(open(os.path.join(ROOT_PATH, "stores.json")))
     ]
 )
 
@@ -36,7 +39,7 @@ def computed_stats(row):
 @st.cache
 def load_products():
     data = pd.read_json(
-        "/data/tmp/products.jsonl",
+        os.path.join(ROOT_PATH, "tmp/products.jsonl"),
         lines=True,
         dtype={"id": object},
     )
@@ -47,7 +50,7 @@ def load_products():
 @st.cache(allow_output_mutation=True)
 def load_data():
     data = pd.read_json(
-        "/data/tmp/latest.jsonl.gz",
+        os.path.join(ROOT_PATH, "tmp/latest.jsonl.gz"),
         lines=True,
         compression="gzip",
         dtype={"store_id": object, "article_id": object},

@@ -12,6 +12,7 @@ services:
       - ./:/app
     environment:
       PORT: 8501
+      ROOT: ./
     ports:
       - 127.0.0.1:8501:8501
 
