@@ -92,8 +92,8 @@ st.sidebar.image(product["mainImageUrl"], width=100)
 selected_date = st.sidebar.slider(
     label="",
     min_value=datetime(2021, 1, 15),
-    value=datetime(2021, 1, 22),
-    max_value=datetime(2021, 1, 22),
+    value=datetime(2021, 1, 26),
+    max_value=datetime(2021, 1, 26),
     format="YYYY-MM-DD",
 )
 
