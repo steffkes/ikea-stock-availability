@@ -6,62 +6,62 @@ import json
 class StockAvailabilitySpider(scrapy.Spider):
     name = "stock-availability"
     start_urls = [
-        f"https://iows.ikea.com/retail/iows/de/de/stores/{store_id}/availability/ART/{article_id}"
-        for store_id in [
-            "066",  # Augsburg
-            "324",  # Berlin-Lichtenberg
-            "394",  # Berlin-Spandau
-            "421",  # Berlin-Tempelhof
-            "129",  # Berlin-Waltersdorf
-            "119",  # Bielefeld
-            "117",  # Braunschweig
-            "412",  # Bremerhaven
-            "228",  # Brinkum
-            "118",  # Chemnitz
-            "223",  # Dortmund
-            "221",  # Dresden
-            "425",  # Duisburg
-            "321",  # Düsseldorf
-            "396",  # Erfurt
-            "148",  # Essen
-            "393",  # Frankfurt
-            "320",  # Freiburg
-            "226",  # Großburgwedel
-            "139",  # Halle/Leipzig
-            "245",  # Hamburg-Altona
-            "325",  # Hamburg-Moorfleet
-            "146",  # Hamburg-Schnelsen
-            "222",  # Hanau
-            "187",  # Hannover EXPO-Park
-            "494",  # Kaarst
-            "430",  # Kaiserslautern
-            "323",  # Kamen
-            "551",  # Karlsruhe
-            "174",  # Kassel
-            "333",  # Kiel
-            "332",  # Koblenz
-            "102",  # Köln-Butzweilerhof
-            "147",  # Köln-Godorf
-            "289",  # Lübeck
-            "225",  # Ludwigsburg
-            "520",  # Magdeburg
-            "397",  # Mannheim
-            "343",  # München-Brunnthal
-            "063",  # München-Eching
-            "326",  # Nürnberg/Fürth
-            "069",  # Oldenburg
-            "184",  # Osnabrück
-            "229",  # Regensburg
-            "092",  # Rostock
-            "227",  # Saarlouis
-            "369",  # Siegen
-            "224",  # Sindelfingen
-            "328",  # Ulm
-            "322",  # Wallau
-            "075",  # Walldorf
-            "493",  # Wetzlar
-            "492",  # Wuppertal
-            "124",  # Würzburg
+        f"https://iows.ikea.com/retail/iows/{country}/{language}/stores/{store_id}/availability/ART/{article_id}"
+        for (country, language, store_id) in [
+            ("de", "de", "066"),  # Augsburg
+            ("de", "de", "324"),  # Berlin-Lichtenberg
+            ("de", "de", "394"),  # Berlin-Spandau
+            ("de", "de", "421"),  # Berlin-Tempelhof
+            ("de", "de", "129"),  # Berlin-Waltersdorf
+            ("de", "de", "119"),  # Bielefeld
+            ("de", "de", "117"),  # Braunschweig
+            ("de", "de", "412"),  # Bremerhaven
+            ("de", "de", "228"),  # Brinkum
+            ("de", "de", "118"),  # Chemnitz
+            ("de", "de", "223"),  # Dortmund
+            ("de", "de", "221"),  # Dresden
+            ("de", "de", "425"),  # Duisburg
+            ("de", "de", "321"),  # Düsseldorf
+            ("de", "de", "396"),  # Erfurt
+            ("de", "de", "148"),  # Essen
+            ("de", "de", "393"),  # Frankfurt
+            ("de", "de", "320"),  # Freiburg
+            ("de", "de", "226"),  # Großburgwedel
+            ("de", "de", "139"),  # Halle/Leipzig
+            ("de", "de", "245"),  # Hamburg-Altona
+            ("de", "de", "325"),  # Hamburg-Moorfleet
+            ("de", "de", "146"),  # Hamburg-Schnelsen
+            ("de", "de", "222"),  # Hanau
+            ("de", "de", "187"),  # Hannover EXPO-Park
+            ("de", "de", "494"),  # Kaarst
+            ("de", "de", "430"),  # Kaiserslautern
+            ("de", "de", "323"),  # Kamen
+            ("de", "de", "551"),  # Karlsruhe
+            ("de", "de", "174"),  # Kassel
+            ("de", "de", "333"),  # Kiel
+            ("de", "de", "332"),  # Koblenz
+            ("de", "de", "102"),  # Köln-Butzweilerhof
+            ("de", "de", "147"),  # Köln-Godorf
+            ("de", "de", "289"),  # Lübeck
+            ("de", "de", "225"),  # Ludwigsburg
+            ("de", "de", "520"),  # Magdeburg
+            ("de", "de", "397"),  # Mannheim
+            ("de", "de", "343"),  # München-Brunnthal
+            ("de", "de", "063"),  # München-Eching
+            ("de", "de", "326"),  # Nürnberg/Fürth
+            ("de", "de", "069"),  # Oldenburg
+            ("de", "de", "184"),  # Osnabrück
+            ("de", "de", "229"),  # Regensburg
+            ("de", "de", "092"),  # Rostock
+            ("de", "de", "227"),  # Saarlouis
+            ("de", "de", "369"),  # Siegen
+            ("de", "de", "224"),  # Sindelfingen
+            ("de", "de", "328"),  # Ulm
+            ("de", "de", "322"),  # Wallau
+            ("de", "de", "075"),  # Walldorf
+            ("de", "de", "493"),  # Wetzlar
+            ("de", "de", "492"),  # Wuppertal
+            ("de", "de", "124"),  # Würzburg
         ]
         for article_id in [
             "70277957",

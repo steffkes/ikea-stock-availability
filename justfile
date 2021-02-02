@@ -55,6 +55,14 @@ stores:
      cat stores.json | \
      jq 'reduce .[] as $line ( {}; . + {($line.value): {name: $line.name, location: $line.storeLocation}} )'
 
+store-list:
+     cat stores.json | \
+     jq -r '.[] | \
+     (.storeUrl | sub("^/(?<country>[a-z]{2})/(?<language>[a-z]{2})/stores/(?<store_id>[0-9]{3})"; "(\"\(.country)\", \"\(.language)\", \"\(.store_id)\")")) + \
+     ", # " + \
+     (.name | sub("^IKEA "; "")) \
+     '
+
 stock:
     gunzip -c data/*.gz | \
     jq -c '{ \
