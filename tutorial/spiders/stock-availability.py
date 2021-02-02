@@ -322,6 +322,7 @@ class StockAvailabilitySpider(scrapy.Spider):
     ]
 
     def parse(self, response):
-        result = json.loads(response.body)
-        result["_fetched_at"] = datetime.now(timezone.utc).isoformat()
-        yield result
+        if response.status == 200:
+            result = json.loads(response.body)
+            result["_fetched_at"] = datetime.now(timezone.utc).isoformat()
+            yield result
