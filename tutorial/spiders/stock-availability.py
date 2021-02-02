@@ -62,6 +62,137 @@ class StockAvailabilitySpider(scrapy.Spider):
             ("de", "de", "493"),  # Wetzlar
             ("de", "de", "492"),  # Wuppertal
             ("de", "de", "124"),  # Würzburg
+            ("at", "de", "387"),  # Graz
+            ("at", "de", "388"),  # Haid
+            ("at", "de", "273"),  # Innsbruck
+            ("at", "de", "155"),  # Klagenfurt
+            ("at", "de", "386"),  # Salzburg
+            ("at", "de", "090"),  # Wien Nord
+            ("at", "de", "085"),  # Wien Vösendorf
+            ("ch", "de", "078"),  # Aubonne VD
+            ("ch", "de", "291"),  # Dietlikon ZH
+            ("ch", "de", "101"),  # Grancia TI
+            ("ch", "de", "290"),  # Lyssach BE
+            ("ch", "de", "292"),  # Pratteln BL
+            ("ch", "de", "275"),  # Rothenburg LU
+            ("ch", "de", "079"),  # Spreitenbach AG
+            ("ch", "de", "917"),  # St. Gallen SG
+            ("ch", "de", "918"),  # Vernier GE
+            ("fr", "fr", "018"),  # Avignon
+            ("fr", "fr", "310"),  # Bayonne Ametzondo
+            ("fr", "fr", "134"),  # Bordeaux
+            ("fr", "fr", "060"),  # Brest
+            ("fr", "fr", "199"),  # Caen Fleury-sur-Orne
+            ("fr", "fr", "345"),  # Clermont-Ferrand
+            ("fr", "fr", "086"),  # Dijon
+            ("fr", "fr", "562"),  # Grand Parilly
+            ("fr", "fr", "435"),  # Grenoble
+            ("fr", "fr", "051"),  # Hénin-Beaumont
+            ("fr", "fr", "133"),  # Lille
+            ("fr", "fr", "433"),  # Marseille - La Valentine
+            ("fr", "fr", "130"),  # Marseille - Vitrolles
+            ("fr", "fr", "260"),  # Metz
+            ("fr", "fr", "402"),  # Montpellier
+            ("fr", "fr", "444"),  # Mulhouse
+            ("fr", "fr", "316"),  # Nantes
+            ("fr", "fr", "487"),  # Orléans Ardon
+            ("fr", "fr", "240"),  # Paris Est, Villiers sur Marne
+            ("fr", "fr", "580"),  # Paris La Madeleine
+            ("fr", "fr", "389"),  # Paris N-O, Franconville
+            ("fr", "fr", "131"),  # Paris Nord, Roissy
+            ("fr", "fr", "083"),  # Paris Ouest, Plaisir
+            ("fr", "fr", "285"),  # Paris Ouest, Vélizy
+            ("fr", "fr", "082"),  # Paris Sud, Evry
+            ("fr", "fr", "432"),  # Paris Sud, Thiais
+            ("fr", "fr", "198"),  # Reims
+            ("fr", "fr", "177"),  # Rennes
+            ("fr", "fr", "163"),  # Rouen
+            ("fr", "fr", "431"),  # St Etienne
+            ("fr", "fr", "239"),  # Strasbourg
+            ("fr", "fr", "315"),  # Toulon
+            ("fr", "fr", "242"),  # Toulouse
+            ("fr", "fr", "434"),  # Tours
+            ("be", "nl", "482"),  # Anderlecht
+            ("be", "nl", "483"),  # Arlon
+            ("be", "nl", "169"),  # Gent
+            ("be", "nl", "452"),  # Hasselt
+            ("be", "nl", "375"),  # Liège
+            ("be", "nl", "423"),  # Mons
+            ("be", "nl", "179"),  # Wilrijk
+            ("be", "nl", "376"),  # Zaventem
+            ("cz", "cs", "278"),  # Brno
+            ("cz", "cs", "309"),  # Ostrava
+            ("cz", "cs", "408"),  # Praha Černý Most
+            ("cz", "cs", "178"),  # Praha-Zličín
+            ("it", "it", "457"),  # Ancona
+            ("it", "it", "356"),  # Bari
+            ("it", "it", "231"),  # Bologna Casalecchio
+            ("it", "it", "354"),  # Brescia Roncadelle
+            ("it", "it", "098"),  # Catania
+            ("it", "it", "029"),  # Chieti S.G. Teatino
+            ("it", "it", "352"),  # Firenze Sesto F.no
+            ("it", "it", "232"),  # Genova
+            ("it", "it", "116"),  # Gorizia_Villesse
+            ("it", "it", "233"),  # Milano Carugate
+            ("it", "it", "455"),  # Milano Corsico
+            ("it", "it", "295"),  # Milano San Giuliano
+            ("it", "it", "353"),  # Napoli Afragola
+            ("it", "it", "355"),  # Padova
+            ("it", "it", "303"),  # Parma
+            ("it", "it", "314"),  # Pisa
+            ("it", "it", "111"),  # Rimini
+            ("it", "it", "234"),  # Roma Anagnina
+            ("it", "it", "427"),  # Roma Porta di Roma
+            ("it", "it", "458"),  # Salerno Baronissi
+            ("it", "it", "456"),  # Torino Collegno
+            ("pt", "pt", "367"),  # Alfragide
+            ("pt", "pt", "499"),  # Braga
+            ("pt", "pt", "453"),  # Loulé
+            ("pt", "pt", "001"),  # Loures
+            ("pt", "pt", "009"),  # Matosinhos
+            ("dk", "da", "121"),  # Gentofte
+            ("dk", "da", "172"),  # Odense
+            ("dk", "da", "094"),  # Taastrup
+            ("dk", "da", "005"),  # Aalborg
+            ("dk", "da", "298"),  # Aarhus
+            ("no", "no", "126"),  # Forus
+            ("no", "no", "095"),  # Furuset
+            ("no", "no", "371"),  # Leangen
+            ("no", "no", "390"),  # Ringsaker
+            ("no", "no", "091"),  # Slependen
+            ("no", "no", "007"),  # Sørlandet
+            ("no", "no", "441"),  # Åsane
+            ("se", "sv", "248"),  # Borlänge
+            ("se", "sv", "122"),  # Gävle
+            ("se", "sv", "398"),  # Göteborg Bäckebol
+            ("se", "sv", "014"),  # Göteborg Kållered
+            ("se", "sv", "470"),  # HaparandaTornio
+            ("se", "sv", "468"),  # Helsingborg
+            ("se", "sv", "109"),  # Jönköping
+            ("se", "sv", "469"),  # Kalmar
+            ("se", "sv", "471"),  # Karlstad
+            ("se", "sv", "017"),  # Linköping
+            ("se", "sv", "445"),  # Malmö
+            ("se", "sv", "019"),  # Stockholm Barkarby
+            ("se", "sv", "012"),  # Stockholm Kungens Kurva
+            ("se", "sv", "467"),  # Sundsvall
+            ("se", "sv", "053"),  # Uddevalla
+            ("se", "sv", "416"),  # Umeå
+            ("se", "sv", "070"),  # Uppsala
+            ("se", "sv", "020"),  # Västerås
+            ("se", "sv", "268"),  # Älmhult
+            ("se", "sv", "106"),  # Örebro
+            ("pl", "pl", "429"),  # Bydgoszcz
+            ("pl", "pl", "203"),  # Gdańsk
+            ("pl", "pl", "306"),  # Katowice
+            ("pl", "pl", "204"),  # Kraków
+            ("pl", "pl", "311"),  # Lublin
+            ("pl", "pl", "329"),  # Łódź
+            ("pl", "pl", "205"),  # Poznań
+            ("pl", "pl", "623"),  # Warszawa / Blue City
+            ("pl", "pl", "188"),  # Warszawa / Janki
+            ("pl", "pl", "307"),  # Warszawa / Targówek
+            ("pl", "pl", "294"),  # Wrocław
         ]
         for article_id in [
             "70277957",
