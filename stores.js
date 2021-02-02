@@ -1,5 +1,4 @@
-console.log(JSON.stringify([
-
+const stores = [
 // DE
 
   {
@@ -4854,5 +4853,16 @@ console.log(JSON.stringify([
                     }
                 }
 
-      ]
-                          ));
+      ];
+
+const mapped = stores.map(function(store) {
+
+  store["name"] = store["name"].replace(/^IKEA /, '');
+
+  const locale = store["storeUrl"].match(/^\/([a-z]{2})\/([a-z]{2})/)
+  store["_locale"] = {country: locale[1], language: locale[2]};
+
+  return store;
+});
+
+console.log(JSON.stringify(mapped));

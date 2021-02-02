@@ -1,7 +1,7 @@
 [
   {
     "value": "066",
-    "name": "IKEA Augsburg",
+    "name": "Augsburg",
     "storeUrl": "/de/de/stores/066",
     "storeLocation": {
       "longitude": "10.871165",
@@ -26,11 +26,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Augsburg\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "324",
-    "name": "IKEA Berlin-Lichtenberg",
+    "name": "Berlin-Lichtenberg",
     "storeUrl": "/de/de/stores/324",
     "storeLocation": {
       "longitude": "13.514063",
@@ -55,11 +59,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Berlin-Lichtenberg\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "394",
-    "name": "IKEA Berlin-Spandau",
+    "name": "Berlin-Spandau",
     "storeUrl": "/de/de/stores/394",
     "storeLocation": {
       "longitude": "13.214343",
@@ -84,11 +92,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Berlin-Spandau\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "421",
-    "name": "IKEA Berlin-Tempelhof",
+    "name": "Berlin-Tempelhof",
     "storeUrl": "/de/de/stores/421",
     "storeLocation": {
       "longitude": "13.365855",
@@ -112,11 +124,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Berlin-Tempelhof\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "129",
-    "name": "IKEA Berlin-Waltersdorf",
+    "name": "Berlin-Waltersdorf",
     "storeUrl": "/de/de/stores/129",
     "storeLocation": {
       "longitude": "13.555562",
@@ -142,11 +158,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Berlin-Waltersdorf\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "119",
-    "name": "IKEA Bielefeld",
+    "name": "Bielefeld",
     "storeUrl": "/de/de/stores/119",
     "storeLocation": {
       "longitude": "8.492475",
@@ -171,11 +191,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Bielefeld\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "117",
-    "name": "IKEA Braunschweig",
+    "name": "Braunschweig",
     "storeUrl": "/de/de/stores/117",
     "storeLocation": {
       "longitude": "10.504367",
@@ -199,11 +223,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Braunschweig\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "412",
-    "name": "IKEA Bremerhaven",
+    "name": "Bremerhaven",
     "storeUrl": "/de/de/stores/412",
     "storeLocation": {
       "longitude": "8.601910",
@@ -228,11 +256,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Bremerhaven\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "228",
-    "name": "IKEA Brinkum",
+    "name": "Brinkum",
     "storeUrl": "/de/de/stores/228",
     "storeLocation": {
       "longitude": "8.803546",
@@ -256,11 +288,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Brinkum\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "118",
-    "name": "IKEA Chemnitz",
+    "name": "Chemnitz",
     "storeUrl": "/de/de/stores/118",
     "storeLocation": {
       "longitude": "12.859647",
@@ -284,11 +320,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Chemnitz\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "223",
-    "name": "IKEA Dortmund",
+    "name": "Dortmund",
     "storeUrl": "/de/de/stores/223",
     "storeLocation": {
       "longitude": "7.368908",
@@ -312,11 +352,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Dortmund\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "221",
-    "name": "IKEA Dresden",
+    "name": "Dresden",
     "storeUrl": "/de/de/stores/221",
     "storeLocation": {
       "longitude": "13.695145",
@@ -340,11 +384,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Dresden\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "425",
-    "name": "IKEA Duisburg",
+    "name": "Duisburg",
     "storeUrl": "/de/de/stores/425",
     "storeLocation": {
       "longitude": "6.764252",
@@ -368,11 +416,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Duisburg\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "321",
-    "name": "IKEA Düsseldorf",
+    "name": "Düsseldorf",
     "storeUrl": "/de/de/stores/321",
     "storeLocation": {
       "longitude": "6.848602",
@@ -396,11 +448,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Düsseldorf\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "396",
-    "name": "IKEA Erfurt",
+    "name": "Erfurt",
     "storeUrl": "/de/de/stores/396",
     "storeLocation": {
       "longitude": "10.949421",
@@ -424,11 +480,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Erfurt\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "148",
-    "name": "IKEA Essen",
+    "name": "Essen",
     "storeUrl": "/de/de/stores/148",
     "storeLocation": {
       "longitude": "7.000179",
@@ -452,11 +512,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Essen\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "393",
-    "name": "IKEA Frankfurt",
+    "name": "Frankfurt",
     "storeUrl": "/de/de/stores/393",
     "storeLocation": {
       "longitude": "8.656883",
@@ -481,11 +545,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Frankfurt\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "320",
-    "name": "IKEA Freiburg",
+    "name": "Freiburg",
     "storeUrl": "/de/de/stores/320",
     "storeLocation": {
       "longitude": "7.832801",
@@ -510,11 +578,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Freiburg\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "226",
-    "name": "IKEA Großburgwedel",
+    "name": "Großburgwedel",
     "storeUrl": "/de/de/stores/226",
     "storeLocation": {
       "longitude": "9.837956",
@@ -538,11 +610,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Grossburgwedel\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "139",
-    "name": "IKEA Halle/Leipzig",
+    "name": "Halle/Leipzig",
     "storeUrl": "/de/de/stores/139",
     "storeLocation": {
       "longitude": "12.183044",
@@ -566,11 +642,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Halle-Leipzig\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "245",
-    "name": "IKEA Hamburg-Altona",
+    "name": "Hamburg-Altona",
     "storeUrl": "/de/de/stores/245",
     "storeLocation": {
       "longitude": "9.941504",
@@ -595,11 +675,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Hamburg-Altona\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "325",
-    "name": "IKEA Hamburg-Moorfleet",
+    "name": "Hamburg-Moorfleet",
     "storeUrl": "/de/de/stores/325",
     "storeLocation": {
       "longitude": "10.092938",
@@ -623,11 +707,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Hamburg-Moorfleet\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "146",
-    "name": "IKEA Hamburg-Schnelsen",
+    "name": "Hamburg-Schnelsen",
     "storeUrl": "/de/de/stores/146",
     "storeLocation": {
       "longitude": "9.928164",
@@ -651,11 +739,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Hamburg-Schnelsen\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "222",
-    "name": "IKEA Hanau",
+    "name": "Hanau",
     "storeUrl": "/de/de/stores/222",
     "storeLocation": {
       "longitude": "8.942442",
@@ -679,11 +771,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Hanau\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "187",
-    "name": "IKEA Hannover EXPO-Park",
+    "name": "Hannover EXPO-Park",
     "storeUrl": "/de/de/stores/187",
     "storeLocation": {
       "longitude": "9.817421",
@@ -707,11 +803,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Hannover\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "494",
-    "name": "IKEA Kaarst",
+    "name": "Kaarst",
     "storeUrl": "/de/de/stores/494",
     "storeLocation": {
       "longitude": "6.640966",
@@ -735,11 +835,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Kaarst\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "430",
-    "name": "IKEA Kaiserslautern",
+    "name": "Kaiserslautern",
     "storeUrl": "/de/de/stores/430",
     "storeLocation": {
       "longitude": "7.695360",
@@ -764,11 +868,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/kaiserslautern\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "323",
-    "name": "IKEA Kamen",
+    "name": "Kamen",
     "storeUrl": "/de/de/stores/323",
     "storeLocation": {
       "longitude": "7.669101",
@@ -792,11 +900,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Kamen\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "551",
-    "name": "IKEA Karlsruhe",
+    "name": "Karlsruhe",
     "storeUrl": "/de/de/stores/551",
     "storeLocation": {
       "longitude": "38.925",
@@ -805,11 +917,15 @@
     "storeAddress": {
       "address1": "karlsruhe"
     },
-    "timeZone": "Europe/Berlin"
+    "timeZone": "Europe/Berlin",
+    "_locale": {
+      "country": "de",
+      "language": "de"
+    }
   },
   {
     "value": "174",
-    "name": "IKEA Kassel",
+    "name": "Kassel",
     "storeUrl": "/de/de/stores/174",
     "storeLocation": {
       "longitude": "9.525447",
@@ -833,11 +949,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Kassel\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "333",
-    "name": "IKEA Kiel",
+    "name": "Kiel",
     "storeUrl": "/de/de/stores/333",
     "storeLocation": {
       "longitude": "10.106971",
@@ -861,11 +981,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Kiel\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "332",
-    "name": "IKEA Koblenz",
+    "name": "Koblenz",
     "storeUrl": "/de/de/stores/332",
     "storeLocation": {
       "longitude": "7.564516",
@@ -889,11 +1013,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Koblenz\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "102",
-    "name": "IKEA Köln-Butzweilerhof",
+    "name": "Köln-Butzweilerhof",
     "storeUrl": "/de/de/stores/102",
     "storeLocation": {
       "longitude": "6.900251",
@@ -918,11 +1046,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Köln-Butzweilerhof\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "147",
-    "name": "IKEA Köln-Godorf",
+    "name": "Köln-Godorf",
     "storeUrl": "/de/de/stores/147",
     "storeLocation": {
       "longitude": "6.971276",
@@ -946,11 +1078,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Köln-Godorf\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "289",
-    "name": "IKEA Lübeck",
+    "name": "Lübeck",
     "storeUrl": "/de/de/stores/289",
     "storeLocation": {
       "longitude": "10.737548",
@@ -968,11 +1104,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Lübeck\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "225",
-    "name": "IKEA Ludwigsburg",
+    "name": "Ludwigsburg",
     "storeUrl": "/de/de/stores/225",
     "storeLocation": {
       "longitude": "9.153950",
@@ -996,11 +1136,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Ludwigsburg\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "520",
-    "name": "IKEA Magdeburg",
+    "name": "Magdeburg",
     "storeUrl": "/de/de/stores/520",
     "storeLocation": {
       "longitude": "11.61184",
@@ -1024,11 +1168,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Magdeburg\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "397",
-    "name": "IKEA Mannheim",
+    "name": "Mannheim",
     "storeUrl": "/de/de/stores/397",
     "storeLocation": {
       "longitude": "8.444066",
@@ -1052,11 +1200,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Mannheim\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "343",
-    "name": "IKEA München-Brunnthal",
+    "name": "München-Brunnthal",
     "storeUrl": "/de/de/stores/343",
     "storeLocation": {
       "longitude": "11.658297",
@@ -1081,11 +1233,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/München-Brunnthal\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "063",
-    "name": "IKEA München-Eching",
+    "name": "München-Eching",
     "storeUrl": "/de/de/stores/063",
     "storeLocation": {
       "longitude": "11.633620",
@@ -1109,11 +1265,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/München-Eching\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "326",
-    "name": "IKEA Nürnberg/Fürth",
+    "name": "Nürnberg/Fürth",
     "storeUrl": "/de/de/stores/326",
     "storeLocation": {
       "longitude": "11.009331",
@@ -1137,11 +1297,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Fürth\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "069",
-    "name": "IKEA Oldenburg",
+    "name": "Oldenburg",
     "storeUrl": "/de/de/stores/069",
     "storeLocation": {
       "longitude": "8.252749",
@@ -1165,11 +1329,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Oldenburg\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "184",
-    "name": "IKEA Osnabrück",
+    "name": "Osnabrück",
     "storeUrl": "/de/de/stores/184",
     "storeLocation": {
       "longitude": "7.971268",
@@ -1193,11 +1361,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Osnabrück\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "229",
-    "name": "IKEA Regensburg",
+    "name": "Regensburg",
     "storeUrl": "/de/de/stores/229",
     "storeLocation": {
       "longitude": "12.177186",
@@ -1221,11 +1393,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Regensburg\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "092",
-    "name": "IKEA Rostock",
+    "name": "Rostock",
     "storeUrl": "/de/de/stores/092",
     "storeLocation": {
       "longitude": "12.048569",
@@ -1249,11 +1425,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Rostock\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "227",
-    "name": "IKEA Saarlouis",
+    "name": "Saarlouis",
     "storeUrl": "/de/de/stores/227",
     "storeLocation": {
       "longitude": "6.760068",
@@ -1277,11 +1457,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Saarlouis\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "369",
-    "name": "IKEA Siegen",
+    "name": "Siegen",
     "storeUrl": "/de/de/stores/369",
     "storeLocation": {
       "longitude": "8.001995",
@@ -1305,11 +1489,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Siegen\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "224",
-    "name": "IKEA Sindelfingen",
+    "name": "Sindelfingen",
     "storeUrl": "/de/de/stores/224",
     "storeLocation": {
       "longitude": "9.005785",
@@ -1333,11 +1521,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Sindelfingen\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "328",
-    "name": "IKEA Ulm",
+    "name": "Ulm",
     "storeUrl": "/de/de/stores/328",
     "storeLocation": {
       "longitude": "9.977002",
@@ -1361,11 +1553,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Ulm\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "322",
-    "name": "IKEA Wallau",
+    "name": "Wallau",
     "storeUrl": "/de/de/stores/322",
     "storeLocation": {
       "longitude": "8.371732",
@@ -1383,11 +1579,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.ikea.com/de/de/stores/wallau/\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "075",
-    "name": "IKEA Walldorf",
+    "name": "Walldorf",
     "storeUrl": "/de/de/stores/075",
     "storeLocation": {
       "longitude": "8.629396",
@@ -1411,11 +1611,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Walldorf\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "493",
-    "name": "IKEA Wetzlar",
+    "name": "Wetzlar",
     "storeUrl": "/de/de/stores/493",
     "storeLocation": {
       "longitude": "8.49747",
@@ -1432,11 +1636,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Wetzlar\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "492",
-    "name": "IKEA Wuppertal",
+    "name": "Wuppertal",
     "storeUrl": "/de/de/stores/492",
     "storeLocation": {
       "longitude": "7.251961",
@@ -1460,11 +1668,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Wuppertal\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "124",
-    "name": "IKEA Würzburg",
+    "name": "Würzburg",
     "storeUrl": "/de/de/stores/124",
     "storeLocation": {
       "longitude": "9.983997",
@@ -1488,11 +1700,15 @@
           "paragraphText": "Aktuelle Informationen zu deinem IKEA Einrichtungshaus findest du <a href=\"https://www.IKEA.de/Würzburg\">hier</a>."
         }
       ]
+    },
+    "_locale": {
+      "country": "de",
+      "language": "de"
     }
   },
   {
     "value": "387",
-    "name": "IKEA Graz",
+    "name": "Graz",
     "storeUrl": "/at/de/stores/387",
     "storeLocation": {
       "longitude": "15.421565",
@@ -1518,11 +1734,15 @@
           "linkUrl": "https://www.ikea.at/graz"
         }
       ]
+    },
+    "_locale": {
+      "country": "at",
+      "language": "de"
     }
   },
   {
     "value": "388",
-    "name": "IKEA Haid",
+    "name": "Haid",
     "storeUrl": "/at/de/stores/388",
     "storeLocation": {
       "longitude": "14.250512",
@@ -1548,11 +1768,15 @@
           "linkUrl": "https://www.ikea.at/haid"
         }
       ]
+    },
+    "_locale": {
+      "country": "at",
+      "language": "de"
     }
   },
   {
     "value": "273",
-    "name": "IKEA Innsbruck",
+    "name": "Innsbruck",
     "storeUrl": "/at/de/stores/273",
     "storeLocation": {
       "longitude": "11.431081",
@@ -1577,11 +1801,15 @@
           "linkUrl": "https://www.ikea.at/innsbruck"
         }
       ]
+    },
+    "_locale": {
+      "country": "at",
+      "language": "de"
     }
   },
   {
     "value": "155",
-    "name": "IKEA Klagenfurt",
+    "name": "Klagenfurt",
     "storeUrl": "/at/de/stores/155",
     "storeLocation": {
       "longitude": "14.369097",
@@ -1606,11 +1834,15 @@
           "linkUrl": "https://www.ikea.at/klagenfurt"
         }
       ]
+    },
+    "_locale": {
+      "country": "at",
+      "language": "de"
     }
   },
   {
     "value": "386",
-    "name": "IKEA Salzburg",
+    "name": "Salzburg",
     "storeUrl": "/at/de/stores/386",
     "storeLocation": {
       "longitude": "13.006268",
@@ -1635,11 +1867,15 @@
           "linkUrl": "https://www.ikea.at/salzburg"
         }
       ]
+    },
+    "_locale": {
+      "country": "at",
+      "language": "de"
     }
   },
   {
     "value": "090",
-    "name": "IKEA Wien Nord",
+    "name": "Wien Nord",
     "storeUrl": "/at/de/stores/090",
     "storeLocation": {
       "longitude": "16.47254",
@@ -1665,11 +1901,15 @@
           "linkUrl": "https://www.ikea.at/wiennord"
         }
       ]
+    },
+    "_locale": {
+      "country": "at",
+      "language": "de"
     }
   },
   {
     "value": "085",
-    "name": "IKEA Wien Vösendorf",
+    "name": "Wien Vösendorf",
     "storeUrl": "/at/de/stores/085",
     "storeLocation": {
       "longitude": "16.317959",
@@ -1695,11 +1935,15 @@
           "linkUrl": "https://www.ikea.at/voesendorf"
         }
       ]
+    },
+    "_locale": {
+      "country": "at",
+      "language": "de"
     }
   },
   {
     "value": "078",
-    "name": "IKEA Aubonne VD",
+    "name": "Aubonne VD",
     "storeUrl": "/ch/de/stores/078",
     "storeLocation": {
       "longitude": "6.398978",
@@ -1720,11 +1964,15 @@
           "storeContactMethodText": "Contact Center"
         }
       ]
+    },
+    "_locale": {
+      "country": "ch",
+      "language": "de"
     }
   },
   {
     "value": "291",
-    "name": "IKEA Dietlikon ZH",
+    "name": "Dietlikon ZH",
     "storeUrl": "/ch/de/stores/291",
     "storeLocation": {
       "longitude": "8.622379",
@@ -1746,11 +1994,15 @@
           "storeContactMethodText": "Contact Center"
         }
       ]
+    },
+    "_locale": {
+      "country": "ch",
+      "language": "de"
     }
   },
   {
     "value": "101",
-    "name": "IKEA Grancia TI",
+    "name": "Grancia TI",
     "storeUrl": "/ch/de/stores/101",
     "storeLocation": {
       "longitude": "8.92637",
@@ -1771,11 +2023,15 @@
           "storeContactMethodText": "Contact Center"
         }
       ]
+    },
+    "_locale": {
+      "country": "ch",
+      "language": "de"
     }
   },
   {
     "value": "290",
-    "name": "IKEA Lyssach BE",
+    "name": "Lyssach BE",
     "storeUrl": "/ch/de/stores/290",
     "storeLocation": {
       "longitude": "7.567778",
@@ -1796,11 +2052,15 @@
           "storeContactMethodText": "Contact Center"
         }
       ]
+    },
+    "_locale": {
+      "country": "ch",
+      "language": "de"
     }
   },
   {
     "value": "292",
-    "name": "IKEA Pratteln BL",
+    "name": "Pratteln BL",
     "storeUrl": "/ch/de/stores/292",
     "storeLocation": {
       "longitude": "7.689443",
@@ -1821,11 +2081,15 @@
           "storeContactMethodText": "Contact Center"
         }
       ]
+    },
+    "_locale": {
+      "country": "ch",
+      "language": "de"
     }
   },
   {
     "value": "275",
-    "name": "IKEA Rothenburg LU",
+    "name": "Rothenburg LU",
     "storeUrl": "/ch/de/stores/275",
     "storeLocation": {
       "longitude": "8.245132",
@@ -1846,11 +2110,15 @@
           "storeContactMethodText": "Contact Center"
         }
       ]
+    },
+    "_locale": {
+      "country": "ch",
+      "language": "de"
     }
   },
   {
     "value": "079",
-    "name": "IKEA Spreitenbach AG",
+    "name": "Spreitenbach AG",
     "storeUrl": "/ch/de/stores/079",
     "storeLocation": {
       "longitude": "8.375165",
@@ -1871,11 +2139,15 @@
           "storeContactMethodText": "Contact Center"
         }
       ]
+    },
+    "_locale": {
+      "country": "ch",
+      "language": "de"
     }
   },
   {
     "value": "917",
-    "name": "IKEA St. Gallen SG",
+    "name": "St. Gallen SG",
     "storeUrl": "/ch/de/stores/917",
     "storeLocation": {
       "longitude": "9.306986",
@@ -1887,11 +2159,15 @@
       "zipCode": "9015"
     },
     "storeMapUrl": "/ms/de_CH/img/store_images/store_maps/1200x900_stgallen.jpg",
-    "timeZone": "Europe/Zurich"
+    "timeZone": "Europe/Zurich",
+    "_locale": {
+      "country": "ch",
+      "language": "de"
+    }
   },
   {
     "value": "918",
-    "name": "IKEA Vernier GE",
+    "name": "Vernier GE",
     "storeUrl": "/ch/de/stores/918",
     "storeLocation": {
       "longitude": "6.092434",
@@ -1912,6 +2188,10 @@
           "storeContactMethodText": "Contact Center"
         }
       ]
+    },
+    "_locale": {
+      "country": "ch",
+      "language": "de"
     }
   },
   {
@@ -1941,6 +2221,10 @@
           "linkUrl": "https://www.ikea.com/fr/fr/store/avignon/store_info"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -1966,6 +2250,10 @@
           "storeContactMethodText": "IKEA Business IKEA Bayonne"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2003,6 +2291,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2040,6 +2332,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2069,6 +2365,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2099,6 +2399,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2128,6 +2432,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2144,7 +2452,11 @@
       "zipCode": "69200"
     },
     "storeMapUrl": "/ms/fr_FR/img/store_images/store_maps/Grand-Parilly- plan-3D.PDF",
-    "timeZone": "Europe/Paris"
+    "timeZone": "Europe/Paris",
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
+    }
   },
   {
     "value": "435",
@@ -2173,6 +2485,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2203,6 +2519,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2233,6 +2553,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2263,6 +2587,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2293,6 +2621,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2322,6 +2654,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2353,6 +2689,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2383,6 +2723,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2413,6 +2757,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2443,6 +2791,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2472,6 +2824,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2494,6 +2850,10 @@
           "paragraphText": "IKEA Paris La Madeleine vous souhaite la bienvenue !"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2523,6 +2883,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2552,6 +2916,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2582,6 +2950,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2612,6 +2984,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2641,6 +3017,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2670,6 +3050,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2699,6 +3083,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2729,6 +3117,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2759,6 +3151,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2788,6 +3184,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2818,6 +3218,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2848,6 +3252,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2878,6 +3286,10 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
@@ -2908,11 +3320,15 @@
           "linkUrl": "https://www.ikea.com/ms/fr_FR/customer_service/contactez_nous.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "fr",
+      "language": "fr"
     }
   },
   {
     "value": "482",
-    "name": "IKEA Anderlecht",
+    "name": "Anderlecht",
     "storeUrl": "/be/nl/stores/482",
     "storeLocation": {
       "longitude": "4.289643",
@@ -2933,11 +3349,15 @@
           "storeContactMethodText": "Contacteer ons"
         }
       ]
+    },
+    "_locale": {
+      "country": "be",
+      "language": "nl"
     }
   },
   {
     "value": "483",
-    "name": "IKEA Arlon",
+    "name": "Arlon",
     "storeUrl": "/be/nl/stores/483",
     "storeLocation": {
       "longitude": "5.890496",
@@ -2958,11 +3378,15 @@
           "storeContactMethodText": "Contacteer ons"
         }
       ]
+    },
+    "_locale": {
+      "country": "be",
+      "language": "nl"
     }
   },
   {
     "value": "169",
-    "name": "IKEA Gent",
+    "name": "Gent",
     "storeUrl": "/be/nl/stores/169",
     "storeLocation": {
       "longitude": "3.687866",
@@ -2983,11 +3407,15 @@
           "storeContactMethodText": "Contacteer ons"
         }
       ]
+    },
+    "_locale": {
+      "country": "be",
+      "language": "nl"
     }
   },
   {
     "value": "452",
-    "name": "IKEA Hasselt",
+    "name": "Hasselt",
     "storeUrl": "/be/nl/stores/452",
     "storeLocation": {
       "longitude": "5.320069",
@@ -3008,11 +3436,15 @@
           "storeContactMethodText": "Contacteer ons"
         }
       ]
+    },
+    "_locale": {
+      "country": "be",
+      "language": "nl"
     }
   },
   {
     "value": "375",
-    "name": "IKEA Liège",
+    "name": "Liège",
     "storeUrl": "/be/nl/stores/375",
     "storeLocation": {
       "longitude": "5.461943",
@@ -3033,11 +3465,15 @@
           "storeContactMethodText": "Contacteer ons"
         }
       ]
+    },
+    "_locale": {
+      "country": "be",
+      "language": "nl"
     }
   },
   {
     "value": "423",
-    "name": "IKEA Mons",
+    "name": "Mons",
     "storeUrl": "/be/nl/stores/423",
     "storeLocation": {
       "longitude": "3.930841",
@@ -3058,11 +3494,15 @@
           "storeContactMethodText": "Contacteer ons"
         }
       ]
+    },
+    "_locale": {
+      "country": "be",
+      "language": "nl"
     }
   },
   {
     "value": "179",
-    "name": "IKEA Wilrijk",
+    "name": "Wilrijk",
     "storeUrl": "/be/nl/stores/179",
     "storeLocation": {
       "longitude": "4.382923",
@@ -3083,11 +3523,15 @@
           "storeContactMethodText": "Contacteer ons"
         }
       ]
+    },
+    "_locale": {
+      "country": "be",
+      "language": "nl"
     }
   },
   {
     "value": "376",
-    "name": "IKEA Zaventem",
+    "name": "Zaventem",
     "storeUrl": "/be/nl/stores/376",
     "storeLocation": {
       "longitude": "4.494374",
@@ -3108,6 +3552,10 @@
           "storeContactMethodText": "Contacteer ons"
         }
       ]
+    },
+    "_locale": {
+      "country": "be",
+      "language": "nl"
     }
   },
   {
@@ -3132,6 +3580,10 @@
           "storeContactMethodText": "Zavolejte nám každý den od 9:00–21:00"
         }
       ]
+    },
+    "_locale": {
+      "country": "cz",
+      "language": "cs"
     }
   },
   {
@@ -3156,6 +3608,10 @@
           "storeContactMethodText": "Zavolejte nám každý den od 9:00–21:00"
         }
       ]
+    },
+    "_locale": {
+      "country": "cz",
+      "language": "cs"
     }
   },
   {
@@ -3180,6 +3636,10 @@
           "storeContactMethodText": "Zavolejte nám každý den od 9:00–21:00"
         }
       ]
+    },
+    "_locale": {
+      "country": "cz",
+      "language": "cs"
     }
   },
   {
@@ -3204,6 +3664,10 @@
           "storeContactMethodText": "Zavolejte nám každý den od 9:00–21:00"
         }
       ]
+    },
+    "_locale": {
+      "country": "cz",
+      "language": "cs"
     }
   },
   {
@@ -3247,6 +3711,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -3290,6 +3758,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -3333,6 +3805,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -3376,6 +3852,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -3420,6 +3900,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -3464,6 +3948,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -3507,6 +3995,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -3550,6 +4042,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/servizio-clienti/faq-contatti/index.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -3593,6 +4089,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -3636,6 +4136,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -3679,6 +4183,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -3723,6 +4231,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -3766,6 +4278,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -3810,6 +4326,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -3854,6 +4374,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -3897,6 +4421,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -3940,6 +4468,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -3984,6 +4516,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -4028,6 +4564,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -4071,6 +4611,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -4114,6 +4658,10 @@
           "linkUrl": "https://www.ikea.com/ms/it_IT/customer-service/faq.html"
         }
       ]
+    },
+    "_locale": {
+      "country": "it",
+      "language": "it"
     }
   },
   {
@@ -4131,7 +4679,11 @@
       "zipCode": "2614-520 Amadora"
     },
     "storeMapUrl": "/ms/pt_PT/img/store_images/store_maps/16-mapa-loja-Alfragide.jpg",
-    "timeZone": "Europe/Lisbon"
+    "timeZone": "Europe/Lisbon",
+    "_locale": {
+      "country": "pt",
+      "language": "pt"
+    }
   },
   {
     "value": "499",
@@ -4149,7 +4701,11 @@
       "zipCode": "4700-068 Braga"
     },
     "storeMapUrl": "/ms/pt_PT/img/local_store_info/braga/maps/mapa-braga-795x795.jpg",
-    "timeZone": "Europe/Lisbon"
+    "timeZone": "Europe/Lisbon",
+    "_locale": {
+      "country": "pt",
+      "language": "pt"
+    }
   },
   {
     "value": "453",
@@ -4164,7 +4720,11 @@
       "address1": "Avenida Algarve nº5",
       "zipCode": "8135-182 Almancil"
     },
-    "timeZone": "Europe/Lisbon"
+    "timeZone": "Europe/Lisbon",
+    "_locale": {
+      "country": "pt",
+      "language": "pt"
+    }
   },
   {
     "value": "001",
@@ -4180,7 +4740,11 @@
       "zipCode": "2660-001 Loures"
     },
     "storeMapUrl": "/ms/pt_PT/img/local_store_info/loures/maps/Shopping_guide_2016_A4.jpg",
-    "timeZone": "Europe/Lisbon"
+    "timeZone": "Europe/Lisbon",
+    "_locale": {
+      "country": "pt",
+      "language": "pt"
+    }
   },
   {
     "value": "009",
@@ -4196,7 +4760,11 @@
       "zipCode": "4450-745 Matosinhos"
     },
     "storeMapUrl": "/ms/pt_PT/img/local_store_info/matosinhos/mobile/009storeguide.jpg",
-    "timeZone": "Europe/Lisbon"
+    "timeZone": "Europe/Lisbon",
+    "_locale": {
+      "country": "pt",
+      "language": "pt"
+    }
   },
   {
     "value": "121",
@@ -4232,6 +4800,10 @@
           "linkUrl": "https://www.ikea.com/dk/da/stores/gentofte/"
         }
       ]
+    },
+    "_locale": {
+      "country": "dk",
+      "language": "da"
     }
   },
   {
@@ -4268,6 +4840,10 @@
           "linkUrl": "https://www.ikea.com/dk/da/stores/odense/"
         }
       ]
+    },
+    "_locale": {
+      "country": "dk",
+      "language": "da"
     }
   },
   {
@@ -4304,6 +4880,10 @@
           "linkUrl": "https://www.ikea.com/dk/da/stores/taastrup/"
         }
       ]
+    },
+    "_locale": {
+      "country": "dk",
+      "language": "da"
     }
   },
   {
@@ -4340,6 +4920,10 @@
           "linkUrl": "https://www.ikea.com/dk/da/stores/aalborg/"
         }
       ]
+    },
+    "_locale": {
+      "country": "dk",
+      "language": "da"
     }
   },
   {
@@ -4377,6 +4961,10 @@
           "linkUrl": "https://www.ikea.com/dk/da/stores/aarhus/"
         }
       ]
+    },
+    "_locale": {
+      "country": "dk",
+      "language": "da"
     }
   },
   {
@@ -4407,6 +4995,10 @@
           "storeContactMethodText": "Bedriftskunder"
         }
       ]
+    },
+    "_locale": {
+      "country": "no",
+      "language": "no"
     }
   },
   {
@@ -4438,6 +5030,10 @@
           "storeContactMethodText": "Bedriftskunder"
         }
       ]
+    },
+    "_locale": {
+      "country": "no",
+      "language": "no"
     }
   },
   {
@@ -4468,6 +5064,10 @@
           "storeContactMethodText": "Bedriftskunder"
         }
       ]
+    },
+    "_locale": {
+      "country": "no",
+      "language": "no"
     }
   },
   {
@@ -4497,6 +5097,10 @@
           "storeContactMethodText": "Bedriftskunder"
         }
       ]
+    },
+    "_locale": {
+      "country": "no",
+      "language": "no"
     }
   },
   {
@@ -4527,6 +5131,10 @@
           "storeContactMethodText": "Bedriftskunder"
         }
       ]
+    },
+    "_locale": {
+      "country": "no",
+      "language": "no"
     }
   },
   {
@@ -4557,6 +5165,10 @@
           "storeContactMethodText": "Bedriftskunder"
         }
       ]
+    },
+    "_locale": {
+      "country": "no",
+      "language": "no"
     }
   },
   {
@@ -4587,6 +5199,10 @@
           "storeContactMethodText": "Bedriftskunder"
         }
       ]
+    },
+    "_locale": {
+      "country": "no",
+      "language": "no"
     }
   },
   {
@@ -4611,6 +5227,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -4636,6 +5256,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -4661,6 +5285,10 @@
           "storeContactMethodText": "IKEA Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -4687,6 +5315,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -4712,6 +5344,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -4738,6 +5374,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -4764,6 +5404,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -4789,6 +5433,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -4814,6 +5462,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -4839,6 +5491,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -4864,6 +5520,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -4889,6 +5549,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -4915,6 +5579,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -4940,6 +5608,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -4965,6 +5637,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -4989,6 +5665,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -5015,6 +5695,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -5040,6 +5724,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -5075,6 +5763,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -5100,6 +5792,10 @@
           "storeContactMethodText": "Kundservice"
         }
       ]
+    },
+    "_locale": {
+      "country": "se",
+      "language": "sv"
     }
   },
   {
@@ -5129,6 +5825,10 @@
           "storeContactMethodText": "Punkt Ratalny IKANO"
         }
       ]
+    },
+    "_locale": {
+      "country": "pl",
+      "language": "pl"
     }
   },
   {
@@ -5158,6 +5858,10 @@
           "storeContactMethodText": "Punkt Ratalny IKANO"
         }
       ]
+    },
+    "_locale": {
+      "country": "pl",
+      "language": "pl"
     }
   },
   {
@@ -5187,6 +5891,10 @@
           "storeContactMethodText": "Punkt Ratalny IKANO"
         }
       ]
+    },
+    "_locale": {
+      "country": "pl",
+      "language": "pl"
     }
   },
   {
@@ -5216,6 +5924,10 @@
           "storeContactMethodText": "Punkt Ratalny IKANO"
         }
       ]
+    },
+    "_locale": {
+      "country": "pl",
+      "language": "pl"
     }
   },
   {
@@ -5250,6 +5962,10 @@
           "storeContactMethodText": "Meble na telefon"
         }
       ]
+    },
+    "_locale": {
+      "country": "pl",
+      "language": "pl"
     }
   },
   {
@@ -5289,6 +6005,10 @@
           "storeContactMethodText": "Meble na telefon"
         }
       ]
+    },
+    "_locale": {
+      "country": "pl",
+      "language": "pl"
     }
   },
   {
@@ -5328,6 +6048,10 @@
           "storeContactMethodText": "Punkt Ratalny IKANO"
         }
       ]
+    },
+    "_locale": {
+      "country": "pl",
+      "language": "pl"
     }
   },
   {
@@ -5343,7 +6067,11 @@
       "address1": "C.H. Blue City, Aleje Jerozolimskie 179",
       "zipCode": "02-222"
     },
-    "timeZone": "Europe/Warsaw"
+    "timeZone": "Europe/Warsaw",
+    "_locale": {
+      "country": "pl",
+      "language": "pl"
+    }
   },
   {
     "value": "188",
@@ -5372,6 +6100,10 @@
           "storeContactMethodText": "Punkt Ratalny IKANO"
         }
       ]
+    },
+    "_locale": {
+      "country": "pl",
+      "language": "pl"
     }
   },
   {
@@ -5401,6 +6133,10 @@
           "storeContactMethodText": "Punkt Ratalny IKANO"
         }
       ]
+    },
+    "_locale": {
+      "country": "pl",
+      "language": "pl"
     }
   },
   {
@@ -5431,6 +6167,10 @@
           "storeContactMethodText": "Punkt Ratalny IKANO"
         }
       ]
+    },
+    "_locale": {
+      "country": "pl",
+      "language": "pl"
     }
   }
 ]

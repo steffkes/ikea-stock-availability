@@ -58,9 +58,7 @@ stores:
 store-list:
      cat stores.json | \
      jq -r '.[] | \
-     (.storeUrl | sub("^/(?<country>[a-z]{2})/(?<language>[a-z]{2})/stores/(?<store_id>[0-9]{3})"; "(\"\(.country)\", \"\(.language)\", \"\(.store_id)\")")) + \
-     ", # " + \
-     (.name | sub("^IKEA "; "")) \
+     "(\"" + ._locale.country + "\", \"" + ._locale.language + "\", \"" + .value + "\"), # " + .name + "" \
      '
 
 stock:
