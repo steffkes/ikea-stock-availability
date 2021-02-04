@@ -3,8 +3,8 @@ import scrapy
 import json
 
 
-class StockAvailabilitySpider(scrapy.Spider):
-    name = "stock-availability"
+class IowsSpider(scrapy.Spider):
+    name = "iows"
     start_urls = [
         f"https://iows.ikea.com/retail/iows/{country}/{language}/stores/{store_id}/availability/ART/{article_id}"
         for (country, language, store_id) in [

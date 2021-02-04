@@ -11,10 +11,10 @@ jobs:
       run: docker-compose -f docker-compose.yml build crawler
     - name: crawl
       run: |
-        touch data/$(date -u +"%Y-%m-%d").jsonlines.gz;
+        touch data/iows/$(date -u +"%Y-%m-%d").jsonlines.gz;
         tmp_file=$(mktemp)
-        docker-compose -f docker-compose.yml run --volume $tmp_file:/tmp/result.jsonlines --entrypoint=/bin/ash crawler -c "scrapy crawl --loglevel=INFO stock-availability -o /tmp/result.jsonlines"
-        gzip --stdout $tmp_file >> data/$(date -u +"%Y-%m-%d").jsonlines.gz
+        docker-compose -f docker-compose.yml run --volume $tmp_file:/tmp/result.jsonlines --entrypoint=/bin/ash crawler -c "scrapy crawl --loglevel=INFO iows -o /tmp/result.jsonlines"
+        gzip --stdout $tmp_file >> data/iows/$(date -u +"%Y-%m-%d").jsonlines.gz
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: update stock-availability

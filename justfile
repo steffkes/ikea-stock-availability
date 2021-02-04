@@ -3,7 +3,7 @@ store_id := "328"
 date := "2021-01-01"
 
 build:
-    gunzip data/*.gz --stdout | \
+    gunzip data/iows/*.gz --stdout | \
     jq -c --arg article_id {{ article_id }} --arg store_id {{ store_id }} ' \
     select( \
       (.StockAvailability.ClassUnitKey.ClassUnitCode["$"] | tostring == $store_id) and \
@@ -18,7 +18,7 @@ build:
     > tmp/{{ article_id }}-{{ store_id }}.jsonl
 
 filter:
-    gunzip data/*.gz --stdout | \
+    gunzip data/iows/*.gz --stdout | \
     jq -c --arg article_id {{ article_id }} --arg store_id {{ store_id }} ' \
     select( \
       (.StockAvailability.ClassUnitKey.ClassUnitCode["$"] | tostring == $store_id) and \
@@ -33,7 +33,7 @@ filter:
     gzip --stdout > tmp/{{ article_id }}-{{ store_id }}-restock.jsonl.gz
 
 tmp-02:
-    gunzip data/$(ls data | tail -n1) --stdout | \
+    gunzip data/iows/$(ls data/iows | tail -n1) --stdout | \
     jq -c --arg article_id {{ article_id }} ' \
     select( \
       (.StockAvailability.ItemKey.ItemNo["$"] | tostring == $article_id) \
@@ -62,7 +62,7 @@ store-list:
      '
 
 stock:
-    gunzip -c data/*.gz | \
+    gunzip -c data/iows/*.gz | \
     jq -c '{ \
       _fetched_at, \
       store_id: .StockAvailability.ClassUnitKey.ClassUnitCode["$"] | tostring, \
@@ -72,7 +72,7 @@ stock:
     gzip -c > tmp/stock.jsonl.gz
 
 stats:
-    gzip -dc data/{{ date }}.jsonlines.gz | \
+    gzip -dc data/iows/{{ date }}.jsonlines.gz | \
     jq -c ' \
     select( \
       (.StockAvailability.ItemKey.ItemNo["$"] | tostring == ("20438707", "30277959", "40474214", "60226039", "70235627", "70277957", "70340807", "80409537", "90272384")) \
