@@ -16,7 +16,8 @@ stores = dict(
         (
             store["value"],
             {
-                "store_name": "%s %s" % (store["_locale"]["country"].upper(), store["name"]),
+                "store_name": "%s %s"
+                % (store["_locale"]["country"].upper(), store["name"]),
                 "country": store["_locale"]["country"].upper(),
                 "lon": float(store["storeLocation"]["longitude"]),
                 "lat": float(store["storeLocation"]["latitude"]),
