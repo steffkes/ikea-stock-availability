@@ -1,3 +1,6 @@
+import os
+import json
+
 # Scrapy settings for tutorial project
 #
 # For simplicity, this file contains only settings considered important or
@@ -11,6 +14,16 @@ BOT_NAME = "tutorial"
 
 SPIDER_MODULES = ["tutorial.spiders"]
 NEWSPIDER_MODULE = "tutorial.spiders"
+
+STORES = json.load(
+    open(os.path.dirname(os.path.realpath(__file__)) + "/../stores.json")
+)
+PRODUCTS = (
+    open(os.path.dirname(os.path.realpath(__file__)) + "/../products.txt")
+    .read()
+    .strip()
+    .split("\n")
+)
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
