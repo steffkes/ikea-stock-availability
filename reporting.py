@@ -16,7 +16,8 @@ stores = dict(
         (
             store["value"],
             {
-                "store_name": store["name"],
+                "store_name": "%s %s" % (store["_locale"]["country"].upper(), store["name"]),
+                "country": store["_locale"]["country"].upper(),
                 "lon": float(store["storeLocation"]["longitude"]),
                 "lat": float(store["storeLocation"]["latitude"]),
             },
@@ -91,9 +92,9 @@ st.sidebar.image(product["mainImageUrl"], width=100)
 
 selected_date = st.sidebar.slider(
     label="",
-    min_value=datetime(2021, 1, 15),
-    value=datetime(2021, 1, 26),
-    max_value=datetime(2021, 1, 26),
+    min_value=datetime(2021, 2, 1),
+    value=datetime(2021, 2, 2),
+    max_value=datetime(2021, 2, 2),
     format="YYYY-MM-DD",
 )
 
@@ -144,6 +145,7 @@ st.altair_chart(
                 domain=(0, article_data["available_stock"].max()), type="linear"
             ),
         ),
+        color="country",
         tooltip=[
             "store_name",
             "available_stock",
