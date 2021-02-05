@@ -15,6 +15,9 @@ jobs:
         tmp_file=$(mktemp)
         docker-compose -f docker-compose.yml run --volume $tmp_file:/tmp/result.jsonlines --entrypoint=/bin/ash crawler -c "scrapy crawl --loglevel=INFO cia -o /tmp/result.jsonlines"
         gzip --stdout $tmp_file >> data/cia/$(date -u +"%Y-%m-%d").jsonlines.gz
+    - uses: actions/checkout@v2
+      with:
+        clean: false
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: update cia
