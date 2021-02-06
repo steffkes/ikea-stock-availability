@@ -1,0 +1,20 @@
+on:
+ workflow_dispatch:
+ schedule:
+  - cron: "10 10 * * *"
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: build
+      run: docker-compose -f docker-compose.yml build crawler
+    - name: crawl
+      run: |
+        touch data/product/$(date -u +"%Y-%m-%d").jsonlines.gz;
+        tmp_file=$(mktemp)
+        docker-compose -f docker-compose.yml run --volume $tmp_file:/tmp/result.jsonlines --entrypoint=/bin/ash crawler -c "scrapy crawl --loglevel=INFO product -o /tmp/result.jsonlines"
+        gzip --stdout $tmp_file >> data/product/$(date -u +"%Y-%m-%d").jsonlines.gz
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: update product
