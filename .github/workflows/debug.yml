@@ -12,7 +12,7 @@ jobs:
         touch data/iows/$(date -u +"%Y-%m-%d").jsonlines.gz;
         tmp_file=$(mktemp)
         ls -lsa $tmp_file
-        echo $tmp_file
-        docker-compose -f docker-compose.yml run --user "$(id -u):$(id -g)" --volume $tmp_file:/tmp/result.jsonlines --entrypoint=/bin/ash crawler -c "id && ls -lsa /tmp && id > /tmp/result.jsonlines"
+        cat $tmp_file
+        docker-compose -f docker-compose.yml run --user "$(id -u):$(id -g)" --volume $tmp_file:/tmp/result.jsonlines --entrypoint=/bin/ash crawler -c "id && ls -lsa /tmp && id > /tmp/result.jsonlines && ls -lsa /tmp"
         ls -lsa $tmp_file
-        echo $tmp_file
+        cat $tmp_file
