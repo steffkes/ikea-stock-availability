@@ -1,0 +1,15 @@
+on:
+ workflow_dispatch:
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: build
+      run: docker-compose -f docker-compose.yml build crawler
+    - name: crawl
+      run: |
+        touch data/iows/$(date -u +"%Y-%m-%d").jsonlines.gz;
+        tmp_file=$(mktemp)
+        docker-compose -f docker-compose.yml run --volume $tmp_file:/tmp/data.jsonlines --entrypoint=/bin/ash crawler -c "ls -lsa /tmp"
+        ls -lsa $tmp_file
