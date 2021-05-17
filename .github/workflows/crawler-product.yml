@@ -13,7 +13,7 @@ jobs:
       run: |
         touch data/product/$(date -u +"%Y-%m-%d").jsonlines.gz;
         tmp_file=$(mktemp)
-        docker-compose -f docker-compose.yml run --volume $tmp_file:/tmp/result.jsonlines --entrypoint=/bin/ash crawler -c "chmod 777 /tmp/result.jsonlines && scrapy crawl --loglevel=INFO product -o /tmp/result.jsonlines"
+        docker-compose -f docker-compose.yml run --user "$(id -u):$(id -g)" --volume $tmp_file:/tmp/result.jsonlines --entrypoint=/bin/ash crawler -c "scrapy crawl --loglevel=INFO product -o /tmp/result.jsonlines"
         gzip --stdout $tmp_file >> data/product/$(date -u +"%Y-%m-%d").jsonlines.gz
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
