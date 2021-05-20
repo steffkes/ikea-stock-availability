@@ -33,3 +33,16 @@ services:
       - ./:/app
     ports:
       - 127.0.0.1:8502:8501
+
+  web:
+    image: caddy:2.4.0-alpine
+    volumes:
+      - ./public:/usr/share/caddy
+    ports:
+      - 127.0.0.1:7200:80
+
+  web-proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile.proxy
+    command: ["lt", "--local-host", "web", "--port", "80"]
