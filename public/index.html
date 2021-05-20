@@ -4,22 +4,42 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wo ist Billy?</title>
-    <style type="text/css">
-      #app { position: relative; }
-      #wrapper { position: fixed; left: 300px; border-left: 1px solid #c0c0c0; padding-left: 20px; }
-    </style>
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.2/css/bulma.min.css" />    
   </head>
   <body>
     <div id="app">
 
-  <div id="wrapper">
-  <p>Mit {{ selectedStores.length }} / {{ maxTries }} Versuchen: {{ result }} / {{ topStockCount }} Böden</p>
-  <table border="1">
+<div class="container">
+  <h1 class="title">Du suchst ein Komplement? Oder auch mehrere?</h1>
+
+
+<article class="media">
+  <figure class="media-left">
+    <p class="image is-64x64">
+      <img src="/images/70277957.jpg">
+    </p>
+  </figure>
+  <div class="media-content">
+    <div class="content">
+      <p>
+        Komplement ist ein Brett, genauer gesagt ein Einlegeboden für das PAX-Schranksystem. Mit einer gewissen Sicherheit ist die Größe die du aktuell brauchst bei deinem IKEA gerade nicht verfügbar. Aber vielleicht ja woanders ...
+      </p>
+    </div>
+  </div>
+</article>
+  
+<div v-if="selectedDate" class="notification">
+    Du konntest am {{ selectedDate.split("-").reverse().join(".") }} in fünf bestimmten Fillialen <strong>maximal {{ topStockCount }} Komplement-Böden</strong> bekommen. Wie viele findest du?
+  </div>
+
+<div class="columns">
+  <div class="column">
+  <table class="table is-fullwidth is-striped">
     <thead>
       <tr>
         <th>Nr</th>
         <th>Ort</th>
-        <th>Anzahl</th>
+        <th class="has-text-right">Anzahl</th>
       </tr>
     </thead>
     <tbody>
@@ -27,7 +47,7 @@
         <td>{{ number }}</td>
         <template v-if="selectedStores[index]">
         <td>{{ storeNames[selectedStores[index]] }}</td>
-        <td>{{ stock[selectedStores[index]] }}</td>
+        <td class="has-text-right">{{ stock[selectedStores[index]] }}</td>
         </template>
         <template v-else>
           <td>&nbsp;</td>
@@ -35,17 +55,29 @@
         </template>
       </tr>
     </tbody>
+    <tfoot>
+      <tr>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th class="has-text-right">{{ result }}</th>
+      </tr>
+    </tfoot>
   </table>
   </div>
-  <ul id="stores">
-    <li v-for="store in stores">
-      <label>
-        <input type="checkbox" v-model="selectedStores" :value="store.value"
-               :disabled="maxTries == selectedStores.length">
+  <div class="column is-two-thirds">
+<div class="buttons">
+  <button v-for="store in stores" class="button" :class="{
+                                                    'is-outlined': !selectedStores.includes(store.value),
+                                                    'is-success': selectedStores.includes(store.value) }" @click="toggle(store.value)" :disabled="maxTries == selectedStores.length">
       {{ store.name }}
-      </label>
-    </li>
-    </ul>
+  </button>
+</div>
+    
+  </div>
+</div>
+
+
+</div>
     </div>
 
     <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.prod.js"></script>
@@ -62,7 +94,7 @@
         dates: [],
         selectedDate: null,
         stock: {},
-        topStockCount: 0,
+          topStockCount: 0,
     }},
     async mounted() {
         const stores = await axios.get("stores.json");
@@ -85,7 +117,16 @@
         storeNames() {
             return Object.fromEntries(this.stores.map(store => [store.value, store.name]))
         }
-    }
+    },
+      methods: {
+          toggle(storeId) {
+              if(this.selectedStores.includes(storeId)) {
+                  this.selectedStores = this.selectedStores.filter(store => store != storeId);
+              } else {
+                  this.selectedStores.push(storeId);
+              }
+          }
+      }
 }
 
 Vue.createApp(App).mount('#app')
