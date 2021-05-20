@@ -63,6 +63,11 @@
       </tr>
     </tfoot>
   </table>
+
+  <p v-if="maxTries == selectedStores.length"><button class="button is-primary" @click="reset">
+    Nochmal spielen!
+    </button></p>
+  
   </div>
   <div class="column is-two-thirds">
 <div class="buttons">
@@ -123,6 +128,9 @@
               if(!this.selectedStores.includes(storeId)) {
                   this.selectedStores.push(storeId);
               }
+          },
+          reset() {
+              this.selectedStores = [];
           }
       }
 }
