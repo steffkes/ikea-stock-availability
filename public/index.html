@@ -68,7 +68,7 @@
 <div class="buttons">
   <button v-for="store in stores" class="button" :class="{
                                                     'is-outlined': !selectedStores.includes(store.value),
-                                                    'is-success': selectedStores.includes(store.value) }" @click="toggle(store.value)" :disabled="maxTries == selectedStores.length">
+                                                    'is-static': selectedStores.includes(store.value) }" @click="set(store.value)" :disabled="maxTries == selectedStores.length">
       {{ store.name }}
   </button>
 </div>
@@ -119,10 +119,8 @@
         }
     },
       methods: {
-          toggle(storeId) {
-              if(this.selectedStores.includes(storeId)) {
-                  this.selectedStores = this.selectedStores.filter(store => store != storeId);
-              } else {
+          set(storeId) {
+              if(!this.selectedStores.includes(storeId)) {
                   this.selectedStores.push(storeId);
               }
           }
