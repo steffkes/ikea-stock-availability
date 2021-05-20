@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wo ist Billy?</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <style type="text/css">
+      #app { position: relative; }
+      #wrapper { position: fixed; left: 300px; border-left: 1px solid #c0c0c0; padding-left: 20px; }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+  <l-map ref="map" zoom="2" :center="[47.41322, -1.219482]">
+    <l-tile-layer
+      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      layer-type="base"
+      name="OpenStreetMap"
+    ></l-tile-layer>
+  </l-map>
+
+  <div id="wrapper">
+  <p>Mit {{ selectedStores.length }} / {{ maxTries }} Versuchen: {{ result }} / {{ topStockCount }} Böden</p>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Nr</th>
+        <th>Ort</th>
+        <th>Anzahl</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="(number, index) in maxTries">
+        <td>{{ number }}</td>
+        <template v-if="selectedStores[index]">
+        <td>{{ storeNames[selectedStores[index]] }}</td>
+        <td>{{ stock[selectedStores[index]] }}</td>
+        </template>
+        <template v-else>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </template>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <ul id="stores">
+    <li v-for="store in stores">
+      <label>
+        <input type="checkbox" v-model="selectedStores" :value="store.value"
+               :disabled="maxTries == selectedStores.length">
+      {{ store.name }}
+      </label>
+    </li>
+    </ul>
+    </div>
+
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/axios@0.21.1/dist/axios.min.js"></script>
+
+    <script>
+
+      const App = {
+  data() {
+      return {
+          maxTries: 5,
+        stores: [],
+        selectedStores: [],
+        dates: [],
+        selectedDate: null,
+        stock: {},
+        topStockCount: 0,
+    }},
+    async mounted() {
+        const stores = await axios.get("stores.json");
+        this.stores = stores.data.filter(store => store["_locale"].country == "de");
+        
+        const index = await axios.get("index.json");
+        this.dates = index.data;
+        this.selectedDate = this.dates[this.dates.length-1];
+
+        const stock = await axios.get("data/" + this.selectedDate + ".json");
+        this.stock = Object.fromEntries(stock.data.map(item => [item.store_id, item.available_stock]));
+
+        this.topStockCount = Object.values(this.stock).sort((a, b) => b-a).slice(0, 5).reduce((sum, v) => sum + v)
+        
+    },
+    computed: {
+        result() {
+            return this.selectedStores.map(store => this.stock[store]).reduce((sum, v) => sum + v, 0)
+        },
+        storeNames() {
+            return Object.fromEntries(this.stores.map(store => [store.value, store.name]))
+        }
+    }
+}
+
+Vue.createApp(App).mount('#app')
+      
+
+    </script>
+  </body>
+</html>
