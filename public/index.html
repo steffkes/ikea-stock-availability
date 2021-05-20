@@ -4,10 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wo ist Billy?</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    />
     <style type="text/css">
       #app { position: relative; }
       #wrapper { position: fixed; left: 300px; border-left: 1px solid #c0c0c0; padding-left: 20px; }
@@ -15,13 +11,6 @@
   </head>
   <body>
     <div id="app">
-  <l-map ref="map" zoom="2" :center="[47.41322, -1.219482]">
-    <l-tile-layer
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      layer-type="base"
-      name="OpenStreetMap"
-    ></l-tile-layer>
-  </l-map>
 
   <div id="wrapper">
   <p>Mit {{ selectedStores.length }} / {{ maxTries }} Versuchen: {{ result }} / {{ topStockCount }} Böden</p>
