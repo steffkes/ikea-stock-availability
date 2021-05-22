@@ -14,19 +14,14 @@
       <div class="container">
         <h1 class="title">Du suchst ein Komplement? Oder auch mehrere?</h1>
 
-        <article class="media">
-
-          <div class="media-content">
-            <div class="content">
-              <p>
-                Komplement ist ein Brett, genauer gesagt ein Einlegeboden für
-                ein Schranksystem. Mit einer gewissen Sicherheit ist die
-                Größe die du aktuell brauchst bei dem schwedischen Möbelhaus in deiner Nähe gerade nicht
-                verfügbar. Aber vielleicht ja woanders ...
-              </p>
-            </div>
-          </div>
-        </article>
+        <div class="block">
+          <p>
+            Komplement ist ein Brett, genauer gesagt ein Einlegeboden für ein
+            Schranksystem. Mit einer gewissen Sicherheit ist die Größe die du
+            aktuell brauchst bei dem schwedischen Möbelhaus in deiner Nähe
+            gerade nicht verfügbar. Aber vielleicht ja woanders ...
+          </p>
+        </div>
 
         <div v-if="selectedDate" class="notification">
           Du konntest am {{ selectedDate.split("-").reverse().join(".") }} in
@@ -91,6 +86,22 @@
               </button>
             </div>
           </div>
+        </div>
+
+        <div class="block">
+          <p>
+            Ein kleines Experiment von
+            <a href="https://izmmwd.de/">izmmwd</a> mit dem
+            <a
+              href="https://www.ikea.com/de/de/p/komplement-boden-weiss-70277957/"
+              >Komplement Boden, weiß, 100×58 cm</a
+            >.<br />
+            Wer tricksen mag kann das am
+            <a href="http://wo-ist-billy.herokuapp.com/" target="new"
+              >Dashboard</a
+            >. Testweise auch für Leuchtmittel, Tische, Matratzen und ein
+            äußerst rares Geschenkeband.
+          </p>
         </div>
       </div>
     </div>
@@ -157,15 +168,5 @@
 
       Vue.createApp(App).mount("#app");
     </script>
-    
-      <article class="media">
-    <div id="app">
-        <div class="content">
-              <p>
-                Ein kleines Experiment von <a href="https://izmmwd.de/">izmmwd</a> mit dem <a href="https://www.ikea.com/de/de/p/komplement-boden-weiss-30277959/">Komplement Boden, weiß, 50x58 cm</a>.<br> Wer tricksen mag kann das am <a href="http://wo-ist-billy.herokuapp.com/" target=new>Dashboard</a>. Testweise auch für Leuchtmittel, Tische, Matratzen und ein äußerst rares Geschenkeband.
-              </p>
-            </div>
-  </div>   
-          </article>  
   </body>
 </html>
