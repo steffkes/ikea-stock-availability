@@ -67,7 +67,7 @@
               </tfoot>
             </table>
 
-            <p v-if="maxTries == selectedStores.length">
+            <p v-if="done">
               <button class="button is-primary" @click="reset">
                 Nochmal spielen!
               </button>
@@ -83,7 +83,7 @@
                   'is-static': selectedStores.includes(store.value)
                 }"
                 @click="set(store.value)"
-                :disabled="maxTries == selectedStores.length"
+                :disabled="done"
               >
                 {{ store.name }}
               </button>
@@ -120,6 +120,7 @@
       const App = {
         data() {
           return {
+            done: false,
             intl: new Intl.NumberFormat("de-DE"),
             maxTries: 5,
             stores: [],
@@ -151,6 +152,14 @@
             .sort((a, b) => b - a)
             .slice(0, 5)
             .reduce((sum, v) => sum + v);
+        },
+        watch: {
+          selectedStores: {
+            deep: true,
+            handler: function (selectedStores) {
+              this.done = this.maxTries == selectedStores.length;
+            },
+          },
         },
         computed: {
           result() {
