@@ -24,9 +24,12 @@
         </div>
 
         <div v-if="selectedDate" class="notification">
-          Du konntest am {{ selectedDate.split("-").reverse().join(".") }} in
+          Du konntest am
+          <strong>{{ selectedDate.split("-").reverse().join(".") }}</strong> in
           fünf Fillialen
-          <strong>maximal {{ topStockCount }} Komplement-Böden</strong>
+          <strong
+            >maximal {{ intl.format(topStockCount) }} Komplement-Böden</strong
+          >
           bekommen. Wie viele findest du?
         </div>
 
@@ -46,7 +49,7 @@
                   <template v-if="selectedStores[index]">
                     <td>{{ storeNames[selectedStores[index]] }}</td>
                     <td class="has-text-right">
-                      {{ stock[selectedStores[index]] }}
+                      {{ intl.format(stock[selectedStores[index]]) }}
                     </td>
                   </template>
                   <template v-else>
@@ -59,7 +62,7 @@
                 <tr>
                   <th>&nbsp;</th>
                   <th>&nbsp;</th>
-                  <th class="has-text-right">{{ result }}</th>
+                  <th class="has-text-right">{{ intl.format(result) }}</th>
                 </tr>
               </tfoot>
             </table>
@@ -117,6 +120,7 @@
       const App = {
         data() {
           return {
+            intl: new Intl.NumberFormat("de-DE"),
             maxTries: 5,
             stores: [],
             selectedStores: [],
