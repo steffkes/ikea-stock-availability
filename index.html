@@ -24,9 +24,12 @@
         </div>
 
         <div v-if="selectedDate" class="notification">
-          Du konntest am {{ selectedDate.split("-").reverse().join(".") }} in
+          Du konntest am
+          <strong>{{ selectedDate.split("-").reverse().join(".") }}</strong> in
           fünf Fillialen
-          <strong>maximal {{ topStockCount }} Komplement-Böden</strong>
+          <strong
+            >maximal {{ intl.format(topStockCount) }} Komplement-Böden</strong
+          >
           bekommen. Wie viele findest du?
         </div>
 
@@ -46,7 +49,7 @@
                   <template v-if="selectedStores[index]">
                     <td>{{ storeNames[selectedStores[index]] }}</td>
                     <td class="has-text-right">
-                      {{ stock[selectedStores[index]] }}
+                      {{ intl.format(stock[selectedStores[index]]) }}
                     </td>
                   </template>
                   <template v-else>
@@ -57,14 +60,17 @@
               </tbody>
               <tfoot>
                 <tr>
-                  <th>&nbsp;</th>
-                  <th>&nbsp;</th>
-                  <th class="has-text-right">{{ result }}</th>
+                  <td colspan="2">
+                    <small v-if="highscore">
+                      Heutiger Highscore: {{ intl.format(highscore) }}
+                    </small>
+                  </td>
+                  <th class="has-text-right">{{ intl.format(result) }}</th>
                 </tr>
               </tfoot>
             </table>
 
-            <p v-if="maxTries == selectedStores.length">
+            <p v-if="done">
               <button class="button is-primary" @click="reset">
                 Nochmal spielen!
               </button>
@@ -80,7 +86,7 @@
                   'is-static': selectedStores.includes(store.value)
                 }"
                 @click="set(store.value)"
-                :disabled="maxTries == selectedStores.length"
+                :disabled="done"
               >
                 {{ store.name }}
               </button>
@@ -95,7 +101,11 @@
             <a
               href="https://www.ikea.com/de/de/p/komplement-boden-weiss-70277957/"
               >Komplement Boden, weiß, 100×58 cm</a
-            >.<br />
+            >
+            <template v-if="stockLastModified">
+              Zuletzt aktualisiert: {{ stockLastModified.toISOString() }}
+            </template>
+            <br />
             Wer mal in die Daten kucken mag kann das auf dem
             <a href="http://wo-ist-billy.herokuapp.com/" target="new"
               >Dashboard</a
@@ -113,12 +123,16 @@
       const App = {
         data() {
           return {
+            highscores: {},
+            done: false,
+            intl: new Intl.NumberFormat("de-DE"),
             maxTries: 5,
             stores: [],
             selectedStores: [],
             dates: [],
             selectedDate: null,
             stock: {},
+            stockLastModified: null,
             topStockCount: 0,
           };
         },
@@ -133,6 +147,7 @@
           this.selectedDate = this.dates[this.dates.length - 1];
 
           const stock = await axios.get("data/" + this.selectedDate + ".json");
+          this.stockLastModified = new Date(stock.headers["last-modified"]);
           this.stock = Object.fromEntries(
             stock.data.map((item) => [item.store_id, item.available_stock])
           );
@@ -141,6 +156,25 @@
             .sort((a, b) => b - a)
             .slice(0, 5)
             .reduce((sum, v) => sum + v);
+
+          this.highscores =
+            JSON.parse(localStorage.getItem("highscores")) || {};
+        },
+        watch: {
+          selectedStores: {
+            deep: true,
+            handler: function (selectedStores) {
+              this.done = this.maxTries == selectedStores.length;
+              this.highscores[this.selectedDate] = Math.max(
+                this.highscores[this.selectedDate],
+                this.result
+              );
+              localStorage.setItem(
+                "highscores",
+                JSON.stringify(this.highscores)
+              );
+            },
+          },
         },
         computed: {
           result() {
@@ -152,6 +186,9 @@
             return Object.fromEntries(
               this.stores.map((store) => [store.value, store.name])
             );
+          },
+          highscore() {
+            return this.highscores[this.selectedDate] || null;
           },
         },
         methods: {
