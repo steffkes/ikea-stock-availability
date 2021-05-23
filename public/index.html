@@ -60,8 +60,11 @@
               </tbody>
               <tfoot>
                 <tr>
-                  <th>&nbsp;</th>
-                  <th>&nbsp;</th>
+                  <td colspan="2">
+                    <small v-if="highscore">
+                      Heutiger Highscore: {{ intl.format(highscore) }}
+                    </small>
+                  </td>
                   <th class="has-text-right">{{ intl.format(result) }}</th>
                 </tr>
               </tfoot>
@@ -120,6 +123,7 @@
       const App = {
         data() {
           return {
+            highscores: {},
             done: false,
             intl: new Intl.NumberFormat("de-DE"),
             maxTries: 5,
@@ -152,12 +156,23 @@
             .sort((a, b) => b - a)
             .slice(0, 5)
             .reduce((sum, v) => sum + v);
+
+          this.highscores =
+            JSON.parse(localStorage.getItem("highscores")) || {};
         },
         watch: {
           selectedStores: {
             deep: true,
             handler: function (selectedStores) {
               this.done = this.maxTries == selectedStores.length;
+              this.highscores[this.selectedDate] = Math.max(
+                this.highscores[this.selectedDate],
+                this.result
+              );
+              localStorage.setItem(
+                "highscores",
+                JSON.stringify(this.highscores)
+              );
             },
           },
         },
@@ -171,6 +186,9 @@
             return Object.fromEntries(
               this.stores.map((store) => [store.value, store.name])
             );
+          },
+          highscore() {
+            return this.highscores[this.selectedDate] || null;
           },
         },
         methods: {
