@@ -12,126 +12,145 @@
   <body>
     <div id="app">
       <div class="container">
-        <h1 class="title">Du suchst ein Komplement? Oder auch mehrere?</h1>
-
-        <div class="block">
-          <p>
-            Komplement ist ein Brett, genauer gesagt ein Einlegeboden für ein
-            Schranksystem. Mit einer gewissen Sicherheit ist die Größe die du
-            aktuell brauchst bei dem schwedischen Möbelhaus in deiner Nähe
-            gerade nicht verfügbar. Aber vielleicht ja woanders ...
-          </p>
-        </div>
-
-        <div v-if="selectedDate" class="notification">
-          Du konntest am
-          <strong>{{ selectedDate.split("-").reverse().join(".") }}</strong> in
-          fünf Fillialen
-          <strong
-            >maximal {{ intl.format(topStockCount) }} Komplement-Böden</strong
-          >
-          bekommen. Wie viele findest du?
-        </div>
-
-        <div class="columns">
-          <div class="column">
-            <table class="table is-fullwidth is-striped">
-              <thead>
-                <tr>
-                  <th>Nr</th>
-                  <th>Ort</th>
-                  <th class="has-text-right">Anzahl</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="(number, index) in maxTries">
-                  <td>{{ number }}</td>
-                  <template v-if="selectedStores[index]">
-                    <td>{{ storeNames[selectedStores[index]] }}</td>
-                    <td class="has-text-right">
-                      {{ intl.format(stock[selectedStores[index]]) }}
-                    </td>
-                  </template>
-                  <template v-else>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                  </template>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <td colspan="2">
-                    <small v-if="highscore">
-                      Heutiger Highscore: {{ intl.format(highscore) }}
-                    </small>
-                  </td>
-                  <th class="has-text-right">{{ intl.format(result) }}</th>
-                </tr>
-              </tfoot>
-            </table>
-
-            <p v-if="done">
-              <button class="button is-primary" @click="reset">
-                Nochmal spielen!
-              </button>
-            </p>
-          </div>
-          <div class="column is-two-thirds">
-            <div class="buttons">
-              <button
-                v-for="store in stores"
-                class="button"
-                :class="{
-                  'is-outlined': !selectedStores.includes(store.value),
-                  'is-static': selectedStores.includes(store.value)
-                }"
-                @click="set(store.value)"
-                :disabled="done"
-              >
-                {{ store.name }}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="block">
-          <p>
-            Ein kleines Experiment von
-            <a href="https://izmmwd.de/">izmmwd</a> mit dem
-            <a
-              href="https://www.ikea.com/de/de/p/komplement-boden-weiss-70277957/"
-              >Komplement Boden, weiß, 100×58 cm</a
-            >
-            <template v-if="stockLastModified">
-              Zuletzt aktualisiert: {{ stockLastModified.toISOString() }}
-            </template>
-            <br />
-            Wer mal in die Daten kucken mag kann das auf dem
-            <a href="http://wo-ist-billy.herokuapp.com/" target="new"
-              >Dashboard</a
-            >. Testweise auch für Leuchtmittel, Tische, Matratzen und ein
-            äußerst rares Geschenkeband.
-          </p>
-        </div>
+        <router-view></router-view>
       </div>
     </div>
 
+    <script type="text/x-template" id="page-template">
+      <h1 class="title">Du suchst ein Komplement? Oder auch mehrere?</h1>
+
+      <div class="block">
+        <p>
+          Komplement ist ein Brett, genauer gesagt ein Einlegeboden für ein
+          Schranksystem. Mit einer gewissen Sicherheit ist die Größe die du
+          aktuell brauchst bei dem schwedischen Möbelhaus in deiner Nähe
+          gerade nicht verfügbar. Aber vielleicht ja woanders ...
+        </p>
+      </div>
+
+      <div v-if="selectedDate" class="notification">
+        Du konntest am
+        <strong>{{ selectedDate.split("-").reverse().join(".") }}</strong>
+        in fünf Fillialen
+        <strong
+          >maximal {{ intl.format(topStockCount) }} Komplement-Böden</strong
+        >
+        bekommen. Wie viele findest du?
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <table class="table is-fullwidth is-striped">
+            <thead>
+              <tr>
+                <th>Nr</th>
+                <th>Ort</th>
+                <th class="has-text-right">Anzahl</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(number, index) in maxTries">
+                <td>{{ number }}</td>
+                <template v-if="selectedStores[index]">
+                  <td>{{ storeNames[selectedStores[index]] }}</td>
+                  <td class="has-text-right">
+                    {{ intl.format(stock[selectedStores[index]]) }}
+                  </td>
+                </template>
+                <template v-else>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </template>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2">
+                  <small v-if="highscore">
+                    Heutiger Highscore: {{ intl.format(highscore) }}
+                  </small>
+                </td>
+                <th class="has-text-right">{{ intl.format(result) }}</th>
+              </tr>
+            </tfoot>
+          </table>
+
+          <p v-if="done">
+            <button class="button is-primary" @click="reset">
+              Nochmal spielen!
+            </button>
+          </p>
+        </div>
+        <div class="column is-two-thirds">
+          <div class="buttons">
+            <button
+              v-for="store in stores"
+              class="button"
+              :class="{
+              'is-outlined': !selectedStores.includes(store.value),
+              'is-static': selectedStores.includes(store.value)
+            }"
+              @click="set(store.value)"
+              :disabled="done"
+            >
+              {{ store.name }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <p>
+          Ein kleines Experiment von
+          <a href="https://izmmwd.de/">izmmwd</a> mit dem
+          <a
+            href="https://www.ikea.com/de/de/p/komplement-boden-weiss-70277957/"
+            >Komplement Boden, weiß, 100×58 cm</a
+          >
+          <template v-if="stockLastModified">
+            Zuletzt aktualisiert: {{ stockLastModified.toISOString() }}
+          </template>
+          <br />
+          Wer mal in die Daten kucken mag kann das auf dem
+          <a href="http://wo-ist-billy.herokuapp.com/" target="new"
+            >Dashboard</a
+          >. Testweise auch für Leuchtmittel, Tische, Matratzen und ein
+          äußerst rares Geschenkeband.
+        </p>
+      </div>
+    </script>
+
     <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/vue-router@4.0.8/dist/vue-router.global.prod.js"></script>
     <script src="https://unpkg.com/axios@0.21.1/dist/axios.min.js"></script>
 
     <script>
-      const App = {
+      const Redirect = {
+        template: "Loading …",
+        async mounted() {
+          const dates = await axios.get("index.json");
+
+          this.$router.replace({
+            name: "page",
+            params: {
+              selectedProduct: "70277957",
+              selectedDate: dates.data[dates.data.length - 1],
+            },
+          });
+        },
+      };
+
+      const Page = {
+        template: "#page-template",
+        props: ["selectedProduct", "selectedDate"],
         data() {
           return {
-            selectedProduct: "70277957",
             highscores: {},
             done: false,
             intl: new Intl.NumberFormat("de-DE"),
             maxTries: 5,
             stores: [],
             selectedStores: [],
-            dates: [],
-            selectedDate: null,
             stock: {},
             stockLastModified: null,
             topStockCount: 0,
@@ -142,10 +161,6 @@
           this.stores = stores.data.filter(
             (store) => store["_locale"].country == "de"
           );
-
-          const index = await axios.get("index.json");
-          this.dates = index.data;
-          this.selectedDate = this.dates[this.dates.length - 1];
 
           const stock = await axios.get(
             "data/" + this.selectedProduct + "/" + this.selectedDate + ".json"
@@ -213,7 +228,22 @@
         },
       };
 
-      Vue.createApp(App).mount("#app");
+      Vue.createApp({})
+        .use(
+          VueRouter.createRouter({
+            history: VueRouter.createWebHashHistory(),
+            routes: [
+              { path: "/", component: Redirect },
+              {
+                path: "/:selectedProduct@:selectedDate",
+                name: "page",
+                component: Page,
+                props: true,
+              },
+            ],
+          })
+        )
+        .mount("#app");
     </script>
   </body>
 </html>
