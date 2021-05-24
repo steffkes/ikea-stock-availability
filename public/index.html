@@ -147,11 +147,11 @@
           this.dates = index.data;
           this.selectedDate = this.dates[this.dates.length - 1];
 
-          const stock = await axios.get("data/" + this.selectedDate + ".json");
-          this.stockLastModified = new Date(stock.headers["last-modified"]);
-          this.stock = Object.fromEntries(
-            stock.data.map((item) => [item.store_id, item.available_stock])
+          const stock = await axios.get(
+            "data/" + this.selectedProduct + "/" + this.selectedDate + ".json"
           );
+          this.stockLastModified = new Date(stock.headers["last-modified"]);
+          this.stock = stock.data;
 
           this.topStockCount = Object.values(this.stock)
             .sort((a, b) => b - a)
