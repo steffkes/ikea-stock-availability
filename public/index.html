@@ -125,26 +125,11 @@
     <script src="https://unpkg.com/axios@0.21.1/dist/axios.min.js"></script>
 
     <script>
-      const Redirect = {
-        template: "Loading …",
-        async mounted() {
-          const dates = await axios.get("index.json");
-
-          this.$router.replace({
-            name: "page",
-            params: {
-              selectedProduct: "70277957",
-              selectedDate: dates.data[dates.data.length - 1],
-            },
-          });
-        },
-      };
-
       const Page = {
         template: "#page-template",
-        props: ["selectedProduct", "selectedDate"],
         data() {
           return {
+            selectedProduct: "70277957",
             highscores: {},
             done: false,
             intl: new Intl.NumberFormat("de-DE"),
@@ -161,6 +146,9 @@
           this.stores = stores.data.filter(
             (store) => store["_locale"].country == "de"
           );
+
+          const dates = await axios.get("index.json");
+          this.selectedDate = dates.data[dates.data.length - 1];
 
           const stock = await axios.get(
             "data/" + this.selectedProduct + "/" + this.selectedDate + ".json"
@@ -232,15 +220,7 @@
         .use(
           VueRouter.createRouter({
             history: VueRouter.createWebHashHistory(),
-            routes: [
-              { path: "/", component: Redirect },
-              {
-                path: "/:selectedProduct@:selectedDate",
-                name: "page",
-                component: Page,
-                props: true,
-              },
-            ],
+            routes: [{ path: "/", component: Page }],
           })
         )
         .mount("#app");
