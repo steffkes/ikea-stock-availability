@@ -123,6 +123,7 @@
       const App = {
         data() {
           return {
+            selectedProduct: "70277957",
             highscores: {},
             done: false,
             intl: new Intl.NumberFormat("de-DE"),
@@ -165,8 +166,14 @@
             deep: true,
             handler: function (selectedStores) {
               this.done = this.maxTries == selectedStores.length;
-              this.highscores[this.selectedDate] = Math.max(
-                this.highscores[this.selectedDate],
+
+              if (!this.highscores[this.selectedProduct]) {
+                this.highscores[this.selectedProduct] = {};
+              }
+              this.highscores[this.selectedProduct][
+                this.selectedDate
+              ] = Math.max(
+                this.highscores[this.selectedProduct][this.selectedDate] || 0,
                 this.result
               );
               localStorage.setItem(
@@ -188,7 +195,10 @@
             );
           },
           highscore() {
-            return this.highscores[this.selectedDate] || null;
+            return this.highscores[this.selectedProduct] &&
+              this.highscores[this.selectedProduct][this.selectedDate]
+              ? this.highscores[this.selectedProduct][this.selectedDate]
+              : null;
           },
         },
         methods: {
